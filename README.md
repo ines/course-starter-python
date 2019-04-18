@@ -12,12 +12,14 @@ back-end code execution uses [Binder](https://mybinder.org) 💖
 
 ## ✅ Quickstart
 
-1. Fork this repo, install and make sure the app is running.
-2. Customize the `meta.json` and `binder/requirements.txt`.
+1. Fork this repo, install it and make sure the app is running locally.
+2. Customize the [`meta.json`](meta.json) and
+   [`binder/requirements.txt`](binder/requirements.txt).
 3. Build a [Binder](https://mybinder.org) from the `binder` branch of this repo.
 4. Add content (chapters, exercises and slides) and optionally add separate
    content license.
-5. Customize the UI theme in `theme.sass` as needed.
+5. Customize the UI theme in [`theme.sass`](theme.sass) and update images in
+   [`static`](static) as needed.
 6. Deploy the app, e.g. to [Netlify](https://netlify.com).
 
 ### Running the app
