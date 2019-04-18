@@ -65,6 +65,7 @@ Gatsby to see the changes if you're editing it while the server is running.**
 | `testTemplate`       | Template used to validate the answers. `${solution}` will be replaced with the user code and `${test}` with the contents of the test file. |
 | `juniper.repo`       | Repo to build on Binder in `user/repo` format. Usually the same as this repo.                                                              |
 | `juniper.branch`     | Branch to build. Ideally not `master`, so the image is not rebuilt every time you push.                                                    |
+| `juniper.lang`       | Code language for syntax highlighting.                                                                                                     |
 | `juniper.kernelType` | The name of the kernel to use.                                                                                                             |
 | `juniper.debug`      | Logs additional debugging info to the console.                                                                                             |
 | `showProfileImage`   | Whether to show the profile image in the footer. If `true`, a file `static/profile.jpg` needs to be available.                             |

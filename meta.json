@@ -11,6 +11,7 @@
     "juniper": {
         "repo": "ines/course-starter-python",
         "branch": "binder",
+        "lang": "python",
         "kernelType": "python3",
         "debug": false
     },

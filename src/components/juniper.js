@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import CodeMirror from 'codemirror'
-import python from 'codemirror/mode/python/python' // eslint-disable-line no-unused-vars
 import { Widget } from '@phosphor/widgets'
 import { Kernel, ServerConnection } from '@jupyterlab/services'
 import { OutputArea, OutputAreaModel } from '@jupyterlab/outputarea'
