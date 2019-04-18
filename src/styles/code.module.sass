@@ -1,0 +1,47 @@
+.root
+    margin-left: -2rem
+    width: calc(100% + 4rem)
+    margin-bottom: 5rem
+
+.cell
+    background: var(--syntax-background)
+    border-top: 1px solid var(--color-subtle-medium)
+
+    & > div:first-child
+        padding: 1.5rem 2rem 1rem
+        position: relative
+
+        &:before
+            content: "Input"
+            display: inline-block
+            border-radius: var(--border-radius)
+            color: var(--syntax-background)
+            background: var(--syntax-text)
+            padding: 0 0.5rem
+            position: absolute
+            top: 1rem
+            right: 1.5rem
+            font-size: var(--font-size-xs)
+            font-weight: bold
+            text-transform: uppercase
+            z-index: 5
+
+.output
+    padding: 2rem 9rem 2rem 3rem
+    background: var(--syntax-text)
+    color: var(--syntax-background)
+    position: relative
+
+    &:before
+        content: "Output"
+        display: inline-block
+        border-radius: var(--border-radius)
+        background: var(--syntax-background)
+        color: var(--syntax-text)
+        padding: 0 0.5rem
+        position: absolute
+        top: 1rem
+        right: 1.5rem
+        font-size: var(--font-size-xs)
+        font-weight: bold
+        text-transform: uppercase

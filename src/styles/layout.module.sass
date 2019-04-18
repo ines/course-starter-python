@@ -1,0 +1,75 @@
+.root
+    width: 100%
+
+.content
+    margin-bottom: 4rem
+    padding: 6rem 1rem 1rem
+
+.logo
+    color: var(--color-theme)
+    position: absolute
+    top: 2rem
+    left: 2rem
+
+@media(min-width: 1200px)
+    .logo
+        position: fixed
+
+.header
+    width: var(--width-container)
+    max-width: 100%
+    margin: 5rem auto
+
+.title
+    font-size: var(--font-size-xl)
+    font-family: var(--font-display)
+    line-height: 1.3
+    margin-bottom: 2rem
+
+.footer
+    background: var(--color-subtle-light)
+    width: 100%
+    padding: 3rem
+    margin-top: 5.5rem
+
+.footer-content
+    max-width: 100%
+    width: var(--width-container)
+    margin: 0 auto
+    font-size: var(--font-size-sm)
+    justify-content: space-between
+    flex-flow: row wrap
+
+@media(min-width: 900px)
+    .footer-content
+        display: flex
+
+.footer-section
+    flex: 0 0 48%
+    padding: 0 2rem
+    margin-bottom: 1rem
+
+.footer-links
+    flex: 0 0 100%
+    padding-top: 2rem
+    font-size: var(--font-size-xs)
+    text-align: center
+    color: var(--color-subtle-dark)
+
+.footer-link
+    display: inline
+
+    &:not(:last-child)
+        margin-right: 1rem
+
+        &:after
+            content: "\b7"
+            margin-left: 1rem
+
+.profile
+    width: var(--size-profile-pic)
+    height: var(--size-profile-pic)
+    border-radius: 50%
+    float: right
+    margin: 0 0 1rem 1rem
+    shape-outside: circle()
