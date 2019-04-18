@@ -14,7 +14,7 @@ back-end code execution uses [Binder](https://mybinder.org) 💖
 
 1. Fork this repo, install and make sure the app is running.
 2. Customize the `meta.json` and `binder/requirements.txt`.
-3. Build a [Binder](https://mybinder.org) from the repo.
+3. Build a [Binder](https://mybinder.org) from the `binder` branch of this repo.
 4. Add content and customize the theme as needed.
 5. Deploy the app, e.g. to [Netlify](https://netlify.com).
 
