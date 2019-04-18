@@ -50,24 +50,24 @@ customization are available:
 The following meta settings are available. **Note that you have to re-start
 Gatsby to see the changes if you're editing it while the server is running.**
 
-| Setting              | Description                                                                                                                                                |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `courseId`           | Unique ID of the course. Will be used when saving completed exercises to the browser's local storage.                                                      |
-| `title`              | The title of the course.                                                                                                                                   |
-| `slogan`             | Course slogan, displayed in the page title on the front page.                                                                                              |
-| `description`        | Course description. Used for site meta and in footer.                                                                                                      |
-| `bio`                | Author bio. Used in the footer.                                                                                                                            |
-| `siteUrl`            | URL of the deployed site (without trailing slash).                                                                                                         |
-| `twitter`            | Author twitter handle, used in Twitter cards meta.                                                                                                         |
-| `fonts`              | [Google Fonts](https://fonts.google.com) to load. Should be the font part of the URL in the embed string, e.g. `IBM+Plex+Sans:700|Lato:400,400i,700,700i`. |
-| `testTemplate`       | Template used to validate the answers. `${solution}` will be replaced with the user code and `${test}` with the contents of the test file.                 |
-| `juniper.repo`       | Repo to build on Binder in `user/repo` format. Usually the same as this repo.                                                                              |
-| `juniper.branch`     | Branch to build. Ideally not `master`, so the image is not rebuilt every time you push.                                                                    |
-| `juniper.kernelType` | The name of the kernel to use.                                                                                                                             |
-| `juniper.debug`      | Logs additional debugging info to the console.                                                                                                             |
-| `showProfileImage`   | Whether to show the profile image in the footer. If `true`, a file `static/profile.jpg` needs to be available.                                             |
-| `footerLinks`        | List of objects with `"text"` and `"url"` to display as links in the footer.                                                                               |
-| `theme`              | Currently only used for the, progressive web app, e.g. as the theme color on mobile. For the UI theme, edit `theme.sass`.                                  |
+| Setting              | Description                                                                                                                                |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `courseId`           | Unique ID of the course. Will be used when saving completed exercises to the browser's local storage.                                      |
+| `title`              | The title of the course.                                                                                                                   |
+| `slogan`             | Course slogan, displayed in the page title on the front page.                                                                              |
+| `description`        | Course description. Used for site meta and in footer.                                                                                      |
+| `bio`                | Author bio. Used in the footer.                                                                                                            |
+| `siteUrl`            | URL of the deployed site (without trailing slash).                                                                                         |
+| `twitter`            | Author twitter handle, used in Twitter cards meta.                                                                                         |
+| `fonts`              | [Google Fonts](https://fonts.google.com) to load. Should be the font part of the URL in the embed string, e.g. `Lato:400,400i,700,700i`.   |
+| `testTemplate`       | Template used to validate the answers. `${solution}` will be replaced with the user code and `${test}` with the contents of the test file. |
+| `juniper.repo`       | Repo to build on Binder in `user/repo` format. Usually the same as this repo.                                                              |
+| `juniper.branch`     | Branch to build. Ideally not `master`, so the image is not rebuilt every time you push.                                                    |
+| `juniper.kernelType` | The name of the kernel to use.                                                                                                             |
+| `juniper.debug`      | Logs additional debugging info to the console.                                                                                             |
+| `showProfileImage`   | Whether to show the profile image in the footer. If `true`, a file `static/profile.jpg` needs to be available.                             |
+| `footerLinks`        | List of objects with `"text"` and `"url"` to display as links in the footer.                                                               |
+| `theme`              | Currently only used for the, progressive web app, e.g. as the theme color on mobile. For the UI theme, edit `theme.sass`.                  |
 
 ### Static assets
 
