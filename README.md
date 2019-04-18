@@ -8,12 +8,15 @@ back-end code execution uses [Binder](https://mybinder.org) 💖
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/ines/courser-starter-python)
 
+![](https://user-images.githubusercontent.com/13643239/56341448-68fe9380-61b5-11e9-816f-5c71ae71b94f.png)
+
 ## ✅ Quickstart
 
 1. Fork this repo, install and make sure the app is running.
 2. Customize the `meta.json` and `binder/requirements.txt`.
 3. Build a [Binder](https://mybinder.org) from the repo.
 4. Add content and customize the theme as needed.
+5. Deploy the app, e.g. to [Netlify](https://netlify.com).
 
 ### Running the app
 
@@ -27,7 +30,7 @@ npm install                # Install dependencies
 npm run dev                # Run the development server
 ```
 
-## 🎨Customization
+## 🎨 Customization
 
 The app separates its source and content – so you usually shouldn't have to dig
 into the JavaScript source to change things. The following points of
