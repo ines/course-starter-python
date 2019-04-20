@@ -12,7 +12,8 @@ back-end code execution uses [Binder](https://mybinder.org) 💖
 
 ## ✅ Quickstart
 
-1. [Import](https://github.com/new/import) this repo, install it and make sure the app is running locally.
+1. [Import](https://github.com/new/import) this repo, install it and make sure
+   the app is running locally.
 2. Customize the [`meta.json`](meta.json) and
    [`binder/requirements.txt`](binder/requirements.txt).
 3. Build a [Binder](https://mybinder.org) from the `binder` branch of this repo.
@@ -72,7 +73,7 @@ Gatsby to see the changes if you're editing it while the server is running.**
 | `juniper.debug`      | Logs additional debugging info to the console.                                                                                             |
 | `showProfileImage`   | Whether to show the profile image in the footer. If `true`, a file `static/profile.jpg` needs to be available.                             |
 | `footerLinks`        | List of objects with `"text"` and `"url"` to display as links in the footer.                                                               |
-| `theme`              | Currently only used for the, progressive web app, e.g. as the theme color on mobile. For the UI theme, edit `theme.sass`.                  |
+| `theme`              | Currently only used for the progressive web app, e.g. as the theme color on mobile. For the UI theme, edit `theme.sass`.                   |
 
 ### Static assets
 
@@ -209,9 +210,10 @@ Container to display slides interactively using Reveal.js and a Markdown file.
 
 Container for multiple-choice question.
 
-| Argument     | Type  | Description                              |
-| ------------ | ----- | ---------------------------------------- |
-| **children** | nodes | Only `<opt>` components for the options. |
+| Argument     | Type            | Description                                                                                  |
+| ------------ | --------------- | -------------------------------------------------------------------------------------------- |
+| `id`         | string / number | Optional unique ID. Can be used if more than one choice question is present in one exercise. |
+| **children** | nodes           | Only `<opt>` components for the options.                                                     |
 
 ```markdown
 <choice>
