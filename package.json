@@ -4,6 +4,7 @@
     "description": "Starter package to build interactive Python courses",
     "version": "0.0.1",
     "author": "Ines Montani <ines@explosion.ai>",
+    "main": "main.js",
     "dependencies": {
         "@illinois/react-use-local-storage": "^1.1.0",
         "@jupyterlab/outputarea": "^0.19.1",
@@ -37,21 +38,52 @@
         "react-helmet": "^5.2.0",
         "rehype-react": "^3.1.0",
         "remark-react": "^5.0.1",
-        "reveal.js": "^3.8.0"
+        "reveal.js": "^3.8.0",
+        "electron-serve": "^0.2.1"
     },
     "scripts": {
         "build": "gatsby build",
         "dev": "gatsby develop",
         "lint": "eslint **",
         "clear": "rm -rf .cache",
-        "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+        "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+        "dist": "electron-builder"
     },
     "devDependencies": {
         "browser-monads": "^1.0.0",
+        "electron": "^4.2.0",
+        "electron-builder": "^20.40.2",
         "prettier": "^1.16.4"
     },
     "repository": {
         "type": "git",
         "url": "https://github.com/ines/course-starter-python"
+    },
+    "build": {
+        "appId": "com.ines.course-starter-python",
+        "dmg": {
+            "contents": [
+                {
+                    "x": 110,
+                    "y": 200
+                },
+                {
+                    "x": 375,
+                    "y": 200,
+                    "type": "link",
+                    "path": "/Applications"
+                }
+            ]
+        },
+        "linux": {
+            "target": [
+                "AppImage",
+                "deb"
+            ]
+        },
+        "win": {
+            "target": "squirrel",
+            "icon": "build/icon.ico"
+        }
     }
 }
