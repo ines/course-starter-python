@@ -24,16 +24,78 @@ let's get started.
 
 This tutorial will describe the steps to create a complete initial "Starter Course" with zero customization. From here we will then change, edit and add files to complete your desired unique course. 
 
+### Install Node 
+
+**Mac instructions** 
+
+_Make sure that you have homebrew installed in order to download `Node`_
+
+The most important part of this installation is making sure that you are running a version of 10. 
+
+Check if you have Node already using command :
+```
+node --version
+``` 
+
+If that produces an error than you can simply download version 10 with the following command: 
+
+```
+brew install node@10
+```
+
+If it's a version greater than 10, you will **need** to downgrade or Gatsby will not be able to start a development server or build a page.
+
+To change to version 10 follow the following commands:
+
+```
+brew search node
+```
+This will give you an output similar to this: 
+
+```
+==> Formulae
+libbitcoin-node   node-build     node@12       nodeenv
+llnode       node-sass      node_exporter    nodenv
+node ✓       node@10       nodebrew
+```
+
+Next you will want to install version 10 will command: 
+
+```
+brew install node@10
+```
+
+we then unlink it from the current version: 
+
+```
+brew unlink node
+```
+
+and then link version 10 that was just installed: 
+
+```
+brew link node@10
+```
+This willl likely need to be forced and thus will require: 
+
+```
+brew link --force --overwrite node@10
+```
+
+Next check again what version you are running to confirm that it is a version of 10. 
+
+```
+node --version
+``` 
+
+
 ### Install Gatsby 
 
-This is a nightmare. 
+This should a single command to complete this. 
 
-download homebrew 
-
-download node 
-brew install nvm
+```
 npm install -g gatsby-cli
-npm install --save gatsby-plugin-sharp
+```
 
 
 
