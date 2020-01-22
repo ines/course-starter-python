@@ -149,10 +149,10 @@ Unlike Ines's [Spacy Course](https://course.spacy.io/), you may want an introduc
 They introduced their courses with a brief summary 
 
  <div class="col-md-6">
-    <img src='img/julia.png' class=" img-responsive" width="44%"/>
+    <img src='img/julia.png' class=" img-responsive" width="40%"/>
   </div>
   <div class="col-md-6">
-    <img src='img/naome.png'  class=" img-responsive" width="44%"/>
+    <img src='img/naome.png'  class=" img-responsive" width="40%"/>
   </div>
 
 ###### Julia Silge's course front page (left) and  Naome Ross's course front page (right) 
