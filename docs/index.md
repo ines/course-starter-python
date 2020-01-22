@@ -7,7 +7,7 @@ This course gives the developer the versatility of a lecture slide-type informat
 Ines Montani has created this framework using Gatsby and Reveal.js in the front-end and Binder and Docker in the back-end. This framework was made possible thanks to the useful JavaScript library [`Juniper`](https://github.com/ines/juniper) Ines created which can add interactive, editable and runnable code snippets to websites. 
 
 ***Please Note:***    
-This project is under active development and there is a possibility of changes. If you would like to contribute or point out corrections, please create a new issue addressing your concern, suggestions or contribution. 
+This project is under active development and there are possibilities of changes. If you would like to contribute or point out corrections, please create a new issue addressing your concern, suggestions or contribution. 
 [![](https://user-images.githubusercontent.com/13643239/56341448-68fe9380-61b5-11e9-816f-5c71ae71b94f.png)](https://course-starter-python.netlify.com)
 
 
@@ -138,21 +138,24 @@ You can now view DSCI-571 in the browser.
 ```
 
 
-## Customizing 
+## Customization
 
 There is a lot of different areas to make your site unique but below we are going to edit the files systematically. 
 
-### Introduction on homepage
+### Introduction on Homepage
 Unlike Ines's [Spacy Course](https://course.spacy.io/), you may want an introduction similar to what [Julia Silge](https://supervised-ml-course.netlify.com/) and [Naome Ross](https://noamross.github.io/gams-in-r-course/) did for their courses. 
 
 
-| ![alt-text-1](img/julia.png)  | ![alt-text-2](img/naome.png) |
-|:---:|:---:|
-| Julia Silge's course front page| Naome Ross's course front page| 
+They introduced their courses with a brief summary 
 
+ <div class="col-md-6">
+    <img src='img/julia.png' class=" img-responsive" width="45%"/>
+  </div>
+  <div class="col-md-6">
+    <img src='img/naome.png'  class=" img-responsive" width="45%"/>
+  </div>
 
- 
-###### caption 
+###### Julia Silge's course front page (left) and  Naome Ross's course front page (right) 
 
 To add this to your course you'll need to edit 
 
