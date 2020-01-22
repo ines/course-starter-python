@@ -143,10 +143,10 @@ You can now view DSCI-571 in the browser.
 There is a lot of different areas to make your site unique but below we are going to edit the files in a systematic way. 
 
 ### Introduction on homepage
-Unlike Ines's [Spacy Course](https://course.spacy.io/), you may want an introduction similar to what [Naome Ross]() and [Julia Silge]() did for their courses. 
+Unlike Ines's [Spacy Course](https://course.spacy.io/), you may want an introduction similar to what  [Julia Silge]() and [Naome Ross]() did for their courses. 
 
-![alt-text-1](image1.png "title-1") ![alt-text-2](image2.png "title-2")
-####### caption 
+![alt-text-1](img/julia.png "Julia Silge's course front page") ![alt-text-2](image2.png "Naome Ross's course front page")
+###### caption 
 
 To add this to your course you'll need to edit 
 
