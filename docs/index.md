@@ -145,7 +145,7 @@ There is a lot of different areas to make your site unique but below we are goin
 ### Introduction on homepage
 Unlike Ines's [Spacy Course](https://course.spacy.io/), you may want an introduction similar to what  [Julia Silge]() and [Naome Ross]() did for their courses. 
 
-![alt-text-1](img/julia.png "Julia Silge's course front page") ![alt-text-2](image2.png "Naome Ross's course front page")
+![alt-text-1](img/julia.png "Julia Silge's course front page") ![alt-text-2](naome.png "Naome Ross's course front page")
 ###### caption 
 
 To add this to your course you'll need to edit 
