@@ -143,17 +143,62 @@ You can now view DSCI-571 in the browser.
 There is a lot of different areas to make your site unique but below we are going to edit the files systematically. 
 
 ### Introduction on Homepage
+
+_It's important to attribute Naome Ross and Julia Silge's courses for this section as they are responsible for the code pasted below_ 
+
 Unlike Ines's [Spacy Course](https://course.spacy.io/), you may want an introduction similar to what [Julia Silge](https://supervised-ml-course.netlify.com/) and [Naome Ross](https://noamross.github.io/gams-in-r-course/) did for their courses. 
 
 
-They introduced their courses with a brief summary 
+They introduced their courses with a brief summary
+
 | ![alt-text-1](img/julia.png)  | ![alt-text-2](img/naome.png) |
 |:---:|:---:|
-| Julia Silge's course front page| Naome Ross's course front page| 
+| Julia Silge's course front page | Naome Ross's course front page| 
 
+This can be done by doing the following:
 
-To add this to your course you'll need to edit 
+- Navigate into the `src/pages/` and open `index.js` 
 
+You will be adding a new `<section>` (Html code) under `<Layout isHome>` and inbetween the following two lines shown below : between 
+```
+<Layout isHome>
+   <Logo className={classes.logo} aria-label={siteMetadata.title} /> # HERE
+            {chapters.map(({ slug, title, description }) => (
+```
+Here is an example of the code you can add.
 
+```
+<section>
+                <h1 className={classes.subtitle}> INSERT CATCHY TAG LINE HERE </h1>
+                <div className={classes.introduction}>
+                <p>
+                    FILLER WORDS HERE. WHAT IS YOUR COURSE ABOUT? DINOSAURS? NEURAL NETS? HOW TO SURVIVE EVENTS WITH THE INLAWS? WRITE IT HERE! 
+                </p>
+                </div>
+            </section>
+```
 
+Since we are adding new class names will are going to need to edit the document that formats the class name. This can be found in `src/styles/` in the doc `index.module.sass`. 
 
+you will need to paste the new classes as follows below into the document. 
+
+```
+.subtitle
+    font-family: var(--font-display)
+    width: 600px
+    height: auto
+    max-width: 100%
+    margin: 0 auto 1rem
+    display: block
+    text-align: center
+
+.introduction
+    width: var(--width-container)
+    max-width: 100%
+    padding: 1rem
+    margin: 0 auto
+    display: block
+    text-align: left
+```
+
+If you want to play with the measurements this is a welcomed opportunity to customize your course further. 
