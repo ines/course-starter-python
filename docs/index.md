@@ -13,7 +13,7 @@ This project is under active development and there is a possibility of changes. 
 
 ## What To Expect 
 
-I hope that this thorough documentation will help you deploy, customize and troubleshoot your own Starter course. 
+I hope that this thorough documentation will help you deploy, customize and troubleshoot your own Starter course. Although the Ines provides some read intructions in her `README.md` file, there were a few notes I wanted to add to it for my colleagues and others attempting to make their own course so that they can save time on troubleshooting. 
 
 You will be working with different file types including `.md` (and potentially `.rmd`), `.json`, `.py` and `.txt`. 
 You may need to know _some_ html for additional customization, however by no means in depth. 
@@ -30,7 +30,8 @@ This tutorial will describe the steps to create a complete initial "Starter Cour
 
 _Make sure that you have homebrew installed in order to download `Node`_
 
-The most important part of this installation is making sure that you are running a version of 10. 
+The most important part of this installation is making sure that you are running some version of 10. 
+
 
 Check if you have Node already using command :
 ```
@@ -43,7 +44,7 @@ If that produces an error than you can simply download version 10 with the follo
 brew install node@10
 ```
 
-If it's a version greater than 10, you will **need** to downgrade or Gatsby will not be able to start a development server or build a page.
+If it's a version other than 10, you will **need** to downgrade/upgrade to version 1- or Gatsby will not be able to start a development server or build a page.
 
 To change to version 10 follow the following commands:
 
@@ -59,43 +60,96 @@ llnode       node-sass      node_exporter    nodenv
 node ✓       node@10       nodebrew
 ```
 
-Next you will want to install version 10 will command: 
+Next you will want to install version 10 with command: 
 
 ```
 brew install node@10
 ```
 
-we then unlink it from the current version: 
+if the checkmark is currently on `node` we then unlink node from it's current version first using: 
 
 ```
 brew unlink node
 ```
 
-and then link version 10 that was just installed: 
+Everyone, will need to link version 10 that was just installed: 
 
 ```
 brew link node@10
 ```
-This willl likely need to be forced and thus will require: 
+
+This will likely need to be forced and thus will require: 
 
 ```
 brew link --force --overwrite node@10
 ```
 
-Next check again what version you are running to confirm that it is a version of 10. 
+You may also be prompted to specify that you need to have node@10 first in your PATH so so you should run the command below before attempting force linking node@10 (the command above) again:
 
+```
+ echo 'export PATH="/usr/local/opt/node@10/bin:$PATH"' >> ~/.bash_profile 
+ ```
+
+Next check again what version you are running to confirm that it is a version of 10. 
+there is a possibility that an error will be produced so you can either permanently set your 
 ```
 node --version
 ``` 
+this should output the following: 
 
+```
+v10.13.0
+```
+
+Now that we have this done, Gatsby installation and building the page should be must easier. 
 
 ### Install Gatsby 
 
-This should a single command to complete this. 
+This should a single command to complete this and will install Gatsby globally on your computer. 
 
 ```
 npm install -g gatsby-cli
 ```
+***NOTE: you will not need to update your dependencies here. 
+
+## Running on local Server 
+
+Next to install all relavent dependencies run the following: 
+```
+npm install 
+```
+
+***NOTE: you will be prompted to `run "npm audit fix" to fix them`. I do not recommending doing this as it will burn your site down. 
+the output below will still build your course: 
+```
+found 572 vulnerabilities (4 low, 4 moderate, 564 high)
+```
+
+and finally to build the site on your local:
+
+```
+npm run dev    
+```
+Delivering this as an output (copy and paste this address into any browser) : 
+```
+You can now view DSCI-571 in the browser.
+
+  http://localhost:8000/
+```
+
+
+## Customizing 
+
+There is a lot of different areas to make your site unique but below we are going to edit the files in a systematic way. 
+
+### Introduction on homepage
+Unlike Ines's [Spacy Course](https://course.spacy.io/), you may want an introduction similar to what [Naome Ross]() and [Julia Silge]() did for their courses. 
+
+![alt-text-1](image1.png "title-1") ![alt-text-2](image2.png "title-2")
+####### caption 
+
+To add this to your course you'll need to edit 
+
 
 
 
