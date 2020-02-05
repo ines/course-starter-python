@@ -13,7 +13,7 @@ This project is under active development and there are possibilities of changes.
 
 ## What To Expect 
 
-I hope that this thorough documentation will help you deploy, customize and troubleshoot your Starter course. Ines provides some wonderful instructions in her `README.md` file, but I noticed there were a few notes I wanted to add to it for my colleagues and others attempting to make their course so that they can save time on troubleshooting. 
+I hope that this thorough documentation will help you deploy, customize and troubleshoot your starter course. Ines provides some wonderful instructions in her `README.md` file, but I noticed there were a few notes I wanted to add to it for my colleagues and others attempting to make their course so that they can save time on troubleshooting. 
 
 You will be working with different file types including `.md` (and potentially `.rmd`), `.json`, `.py` and `.txt`. 
 You may need to know _some_ Html for additional customization, however by no means in-depth. 
@@ -101,7 +101,7 @@ this should output the following:
 v10.13.0
 ```
 
-Now that we have this done, Gatsby's installation and building the page should be must easier. 
+Now that we have this done, Gatsby's installation and building the page should be much easier. 
 
 ### Install Gatsby 
 
@@ -112,6 +112,17 @@ npm install -g gatsby-cli
 ```
 ***NOTE: you will not need to update your dependencies here. 
 
+### Clone or Install the Repository
+
+There are 2 methods in which this step can be done.
+
+a) Simply clone the [starter course repo](https://github.com/ines/course-starter-python)
+b) [Import](https://github.com/new/import) and install this repo
+
+Make sure that you ***merge all the changes on the other branches to the master one** if you do not create a pull request for `electron` and `feature/deep-links` branches your course will not successfully deploy.*
+
+One you have done this you will need to locate yourself to the root of the repo. 
+
 ## Running on local Server 
 
 Next, we must  install all relevant dependencies by running the following: 
@@ -119,7 +130,7 @@ Next, we must  install all relevant dependencies by running the following:
 npm install 
 ```
 
-***NOTE: you will be prompted to `run "npm audit fix" to fix them`. I do not recommend doing this as it will burn your site down. 
+***NOTE: you will be prompted to `run "npm audit fix" to fix them`. I do not recommend doing this as it will burn your site down.***  
 the output below will still build your course: 
 ```
 found 572 vulnerabilities (4 low, 4 moderate, 564 high)
@@ -130,12 +141,17 @@ and finally to build the site on your local:
 ```
 npm run dev    
 ```
+
 Delivering this as an output (copy and paste this address into any browser) : 
 ```
-You can now view DSCI-571 in the browser.
+You can now view course-starter-python in the browser.
 
   http://localhost:8000/
 ```
+This should be the begining of a functioning starter-course! 
+
+
+Now that you have a website that is deploying on your local server we can now begin the steps to customize it to your own taste. 
 
 
 ## Customization
@@ -202,3 +218,4 @@ you will need to paste the new classes as follows below into the document.
 ```
 
 If you want to play with the measurements this is a welcomed opportunity to customize your course further. 
+
