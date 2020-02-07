@@ -20,7 +20,20 @@ You may need to know _some_ Html for additional customization, however by no mea
 
 let's get started. 
 
-## Setup 
+## Setup using Docker Compose 
+
+I'm writing this documentation at 10:44pm and still need to go home. but now y'all can run this on your local with a single command your welcome I'm busing home and sleeping now. 
+
+```
+docker-compose up
+```
+then go to your favourite web browser and type in the searchbar 
+
+`http://0.0.0.0:8000/`
+
+If this doesn't work I'm going to go into a corner and think about my life choices and possible eat my feelings away. 
+
+## Setup without Docker 
 
 This tutorial will describe the steps to create a complete initial "Starter Course" with zero customization. From here we will then change, edit and add files to complete your desired unique course. 
 
