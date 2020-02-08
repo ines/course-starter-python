@@ -22,8 +22,12 @@ let's get started.
 
 ## Setup using Docker Compose 
 
-I'm writing this documentation at 10:44pm and still need to go home. but now y'all can run this on your local with a single command your welcome I'm busing home and sleeping now. 
+### Clone the repo 
 
+Clone this repo [starter course repo](https://github.com/UBC-MDS/course-starter-python)
+and locate yourself to the root of the repo where the `Dockerfile` is located. 
+
+Then run this command. It should take 5-7 minutes. 
 ```
 docker-compose up
 ```
@@ -31,7 +35,6 @@ then go to your favourite web browser and type in the searchbar
 
 `http://0.0.0.0:8000/`
 
-If this doesn't work I'm going to go into a corner and think about my life choices and possible eat my feelings away. 
 
 ## Setup without Docker 
 
