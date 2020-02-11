@@ -22,6 +22,8 @@ let's get started.
 
 ## Setup using Docker Compose 
 
+Advantages and Disadvantages of not installing `node` and `Gatsby` on your local. Since this platform uses version 10 of `node`, you may find yourself unlinking and relinking updated versions often. In this case it may be in your best interest to use Docker compose. Unfortunate when you are updateing this course if you want to see changes you have made, you will have to push any changes to the repo and then wait to build the container again which as you will experience, quite lengthy. The difference with simply installing node 10 and ghatsby on your local is that as you make changes to your repository files and architecture, it is reflected on your local server instantly without the need to push your changes to the repo. Decide for yourself which one is more beneficial for your needs. 
+
 ### Clone the repo 
 
 Clone this repo [starter course repo](https://github.com/UBC-MDS/course-starter-python)
