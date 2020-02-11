@@ -171,6 +171,87 @@ This should be the begining of a functioning starter-course!
 
 Now that you have a website that is deploying on your local server we can now begin the steps to customize it to your own taste. 
 
+## Repository Structure 
+
+See architechture below. Make sure to add this to your path when calling them in your md file. Some of these files will be explained in further detail depending on if customization or additions is required. 
+
+```
+course-starter-python
+├── .gitignore          # Files you change on your local that you do not want to track changes for or commit to the repo. 
+├── .prettierrc         # Adds consistency to coding style. 
+├── LICENSE             # Terms able to use this platform 
+├── README.md           # Documentation and Description 
+├── docker-compose.yml  # This and the dockerfile and needed to create a container used to install Gatsby and node10 
+├── dockerfile          # See above 
+├── gatsby-browser.js    
+├── gatsby-config.js    
+├── gatsby-node.js      
+├── main.js
+├── meta.json           # Add neccasary customization such as descriptions bio and branch needed to make binder from 
+├── package-lock.json
+├── package.json
+├── theme.sass          # Can be customizable to change fonts style and size and website colours and font 
+├── binder   
+    └── requirements.txt     # A file containing all the packages needed for the coding exercises
+├── chapter             # n = the number of modules/chapters you want. 
+    ├── module0.md
+    ├── module1.md
+    ├── ...
+    └── moduleN.md
+├── data                # Store exercise datafiles here 
+    └── exercise-data.csv
+├── exercises           # This file will contain all the coding exercise scripts. 
+    ├── exercise_01.py
+    ├── solution_01.py
+    ├── test_01.py
+    ├── function.py
+    └── price_linearanalysis3.png
+├── slides              # This is where the slide decks live
+    ├── module0_00.md
+    ├── ...
+    └── moduleN_nn.md
+├── src                 # Don't want to go to much into this 
+    ├── markdown.js
+    ├── context.js
+    ├── components              
+        ├── button.js
+        ├── choice.js
+        ├── code.js
+        ├── exercise.js
+        ├── hint.js
+        ├── juniper.js
+        ├── layout.js
+        ├── link.js
+        ├── seo.js
+        ├── slides.js
+        └── typography.js
+    ├── pages              
+        └── index.js
+    ├── styles               
+        ├── button.module.sass
+        ├── choice.module.sass
+        ├── code.module.sass
+        ├── exercise.module.sass
+        ├── hint.module.sass
+        ├── index.module.sass
+        ├── index.sass
+        ├── layout.module.sass
+        ├── link.module.sass
+        ├── reveal.css
+        ├── slides.module.sass
+        └── typography.module.sass
+    └── templates              
+        └── chapter.js
+└── static               # This is where most of your media will live, be it for slides, or anything else. 
+    ├── icon.png
+    ├── icon_check.svg
+    ├── icon_slides.svg
+    ├── logo.svg
+    ├── profile.jpg
+    └── social.jpg
+
+
+```
 
 ## Customization
 
@@ -179,10 +260,6 @@ There is a lot of different areas to make your site unique but below we are goin
 ### Introduction on Homepage
 
 _It's important to attribute Naome Ross and Julia Silge's courses for this section as they are responsible for the code pasted below_ 
-
-## Customization
-
-There is a lot of different areas to make your site unique but below we are going to edit the files systematically. 
 
 ### Introduction on Homepage
 
@@ -304,98 +381,52 @@ Here is where we will be changing all the homepage information including Course 
 
 for guidance on the other settings refer to [Ines Montani's Documentation](https://github.com/ines/course-starter-python#metajson)
 
-### Images, Logos, Icons, Videos and Audio files 
+### `theme.sass`
 
-If you have been following along here while you construct your course you may notice at this point that you have yet to change and graphics. 
+This is where you can change certain design elements of the course including font size, style and colour, overall theme colour, button colour. 
+
+
+## Contents
+
+This is where the meat and potatos of your course is.
+
+Ines Montani [discusses in detail each section](https://github.com/UBC-MDS/course-starter-python#%EF%B8%8F-content), however there are a few little details I want to emphesize on that could help as you create this site. 
+
+### Chapters 
+
+These are the files that make up the topics of your course and will be displayed on your course site as below: 
+
+
+
+
+### `static` folder 
+If you have been following along here while you construct your course you may notice at this point that you have yet to change any graphics. 
 
 The `static` file is where any additional images, videos and audio files are store that you will need for the questions or slides part of your course. 
 
-I find it particularly useful to create additional files in here to address the different chapters you will be making for added clarity and organization. aka I add a folder for each chapter and save the images in it's corresponding folder. 
-
-See architechture below. Make sure to add this to your path when calling them in your md file. 
-
+I find it particularly useful to create additional files in here to address the different chapters you will be making for added clarity and organization. aka I add a folder for each chapter/module and save the media files in it's corresponding folder. 
+ex: 
 ```
-course-starter-python
-├── .gitignore          # Files you change on your local that you do not want to track changes for or commit to the repo. 
-├── .prettierrc         # Adds consistency to coding style. 
-├── LICENSE             # Terms able to use this platform 
-├── README.md           # Documentation and Description 
-├── docker-compose.yml  # This and the dockerfile and needed to create a container used to install Gatsby and node10 
-├── dockerfile          # See above 
-├── gatsby-browser.js    
-├── gatsby-config.js    
-├── gatsby-node.js      
-├── main.js
-├── meta.json           # Add neccasary customization such as descriptions bio and branch needed to make binder from 
-├── package-lock.json
-├── package.json
-├── theme.sass          # Can be customizable to change fonts style and size and website colours and font 
-├── binder   
-    └── requirements.txt     # A file containing all the packages needed for the coding exercises
-├── chapter             # n = the number of modules/chapters you want. 
-    ├── module0.md
-    ├── module1.md
-    ├── ...
-    └── moduleN.md
-├── data                # Store exercise datafiles here 
-    └── exercise-data.csv
-├── exercises           # This file will contain all the coding exercise scripts. 
-    ├── exercise_01.py
-    ├── solution_01.py
-    ├── test_01.py
-    ├── function.py
-    └── price_linearanalysis3.png
-├── slides              # This is where the slide decks live
-    ├── module0_00.md
-    ├── ...
-    └── moduleN_nn.md
-├── src                 # Don't want to go to much into this 
-    ├── markdown.js
-    ├── context.js
-    ├── components              
-        ├── button.js
-        ├── choice.js
-        ├── code.js
-        ├── exercise.js
-        ├── hint.js
-        ├── juniper.js
-        ├── layout.js
-        ├── link.js
-        ├── seo.js
-        ├── slides.js
-        └── typography.js
-    ├── pages              
-        └── index.js
-    ├── styles               
-        ├── button.module.sass
-        ├── choice.module.sass
-        ├── code.module.sass
-        ├── exercise.module.sass
-        ├── hint.module.sass
-        ├── index.module.sass
-        ├── index.sass
-        ├── layout.module.sass
-        ├── link.module.sass
-        ├── reveal.css
-        ├── slides.module.sass
-        └── typography.module.sass
-    └── templates              
-        └── chapter.js
+...
 └── static               # This is where most of your media will live, be it for slides, or anything else. 
     ├── icon.png
     ├── icon_check.svg
     ├── icon_slides.svg
     ├── logo.svg
     ├── profile.jpg
-    └── social.jpg
-
-
+    ├── social.jpg
+    ├── module1
+        ├── audio.mp3
+        ├── img.png
+        └── video.mp4
+    ├── ....
+    └── moduleN
+        ├── audio_n.mp3
+        ├── img_n.jpg
+        └── video_n.mp4
 ```
+The required images are all specified in Ine's documentation in her [`README.md` here](https://github.com/UBC-MDS/course-starter-python#static-assets).
+
+#### Enbedding Video and Audio in Slides 
 
 
-
-
-
-To address the standard Course and bio images Ines has added a discriptive table in her course [`README.md`](https://github.com/UBC-MDS/course-starter-python#static-assets)
-
-_Note: If the change th
