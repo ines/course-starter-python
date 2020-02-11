@@ -397,9 +397,8 @@ Ines Montani [discusses in detail each section](https://github.com/UBC-MDS/cours
 These are the files that make up the topics of your course and will be displayed on your course site as below: 
 
 ![](img/chapters_img.png)
-<font size="1" color="red"> **Source: Ines Montani from https://course.spacy.io** </font> 
+<font size="1" color="grey"> Source: Ines Montani from https://course.spacy.io </font>
 
-<span style="color:red">some **This is Red Bold.** text</span>
 
 
 each md file in here will need the specified yaml that Ines explains: 
