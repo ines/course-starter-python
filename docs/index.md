@@ -396,7 +396,31 @@ Ines Montani [discusses in detail each section](https://github.com/UBC-MDS/cours
 
 These are the files that make up the topics of your course and will be displayed on your course site as below: 
 
+![](img/chapters_img.png)
+###### Source: Ines Montani from https://course.spacy.io
 
+each md file in here will need the specified yaml that Ines explains: 
+
+```
+---
+title: The chapter title
+description: The chapter description
+prev: /chapter1 # exact path to previous chapter or null to not show a link
+next: /chapter3 # exact path to next chapter or null to not show a link
+id: 2 # unique identifier for chapter
+type: chapter # important: this creates a standalone page from the chapter
+---
+```
+The only things I want to emphasis is as follows: 
+
+1. Make sure each id is unique or you may have some issues with some modules not showing up
+2. Make sure that you take care specifying the correct `prev` and `next` otherwise it could damage the flow of your material. 
+3. you don't need to have your extension of your course labeled as "chapters" if you wish to call each topic here something other than chapter in the url then simply change the file names to `module`, `topic`, `lecture` followed by the number instead. Do not change the folder name and do not change the `type` in the yaml. 
+
+Each chapter file with contain the blueprint of what that chapter will look like. Specifically: 
+
+![](img/chapters_layout.png)
+###### Source: Ines Montani from https://course.spacy.io/chapter1
 
 
 ### `static` folder 
@@ -425,7 +449,7 @@ ex:
         ├── img_n.jpg
         └── video_n.mp4
 ```
-The required images are all specified in Ine's documentation in her [`README.md` here](https://github.com/UBC-MDS/course-starter-python#static-assets).
+The required images are all specified in Ines' documentation in her [`README.md` here](https://github.com/UBC-MDS/course-starter-python#static-assets).
 
 #### Enbedding Video and Audio in Slides 
 
