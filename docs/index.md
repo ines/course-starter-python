@@ -261,10 +261,6 @@ There is a lot of different areas to make your site unique but below we are goin
 
 _It's important to attribute Naome Ross and Julia Silge's courses for this section as they are responsible for the code pasted below_ 
 
-### Introduction on Homepage
-
-_It's important to attribute Naome Ross and Julia Silge's courses for this section as they are responsible for the code pasted below_ 
-
 Unlike Ines's [Spacy Course](https://course.spacy.io/), you may want an introduction similar to what [Julia Silge](https://supervised-ml-course.netlify.com/) and [Naome Ross](https://noamross.github.io/gams-in-r-course/) did for their courses. 
 
 They introduced their courses with a brief summary
@@ -399,7 +395,7 @@ These are the files that make up the topics of your course and will be displayed
 ![](img/chapters_img.png)
 <font size="1" color="grey"> Source: Ines Montani from https://course.spacy.io </font>
 
-
+<br> 
 
 each md file in here will need the specified yaml that Ines explains: 
 
@@ -419,10 +415,49 @@ The only things I want to emphasis is as follows:
 2. Make sure that you take care specifying the correct `prev` and `next` otherwise it could damage the flow of your material. 
 3. you don't need to have your extension of your course labeled as "chapters" if you wish to call each topic here something other than chapter in the url then simply change the file names to `module`, `topic`, `lecture` followed by the number instead. Do not change the folder name and do not change the `type` in the yaml. 
 
-Each chapter file with contain the blueprint of what that chapter will look like. Specifically: 
+Each chapter file with contain the code of what that chapter will look like. Specifically: 
 
 ![](img/chapter_layout.png)
 <font size="1" color="grey">Source: Ines Montani from https://course.spacy.io/chapter1</font>
+   
+<br>
+
+Now that we have a chapter.md file with a completed yaml, lets add the course content. 
+
+Each numbered item as dispayed in the chapter corresponds to an `exercise`. Each exercise needs a unique id and specified with a title. 
+
+```
+<exercise id="1" title="Title of the exercise">
+
+something here
+
+</exercise>
+```
+
+These exercises can in the form of different activities as well
+
+1. Slides: Lecture material and content 
+2. Codeblock exercises: An opportunity for students to test their coding skills
+3. Multiple choice questions: : An opportunity for students to test themselves on the material they just learned.
+
+
+### Slides 
+
+To makes your exercise a slide deck exercises you will need to do the write the following in your `chapter.md` file: 
+
+```
+<exercise id="1" title="Introduction " type="slides">
+
+<slides source="module1_01">
+</slides>
+
+</exercise>
+``` 
+Notice that wer specify slides using `type="slides` argument in the exercise container
+Ines gives information about [this](https://github.com/ines/course-starter-python#slides) but I thought I would add everything here. 
+
+========= HERE=======
+You'll also notice we are calling a source file to display our slides. These slides are stored in the `slides`
 
 
 ### `static` folder 
