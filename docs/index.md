@@ -24,16 +24,16 @@ let's get started.
 
 Advantages and Disadvantages of not installing `node` and `Gatsby` on your local. Since this platform uses version 10 of `node`, you may find yourself unlinking and relinking updated versions often. In this case it may be in your best interest to use Docker compose. Unfortunate when you are updateing this course if you want to see changes you have made, you will have to push any changes to the repo and then wait to build the container again which as you will experience, quite lengthy. The difference with simply installing node 10 and ghatsby on your local is that as you make changes to your repository files and architecture, it is reflected on your local server instantly without the need to push your changes to the repo. Decide for yourself which one is more beneficial for your needs. 
 
-### Clone the repo 
 
-Clone this repo [starter course repo](https://github.com/UBC-MDS/course-starter-python)
-and locate yourself to the root of the repo where the `Dockerfile` is located. 
+1. Clone this repo [starter course repo](https://github.com/UBC-MDS/course-starter-python)
+and locate yourself to the root of the repo where the `Dockerfile` is located.   
 
-Then run this command. It should take 5-7 minutes. 
+2. Run the following command. It should take 5-7 minutes to run.  
 ```
 docker-compose up
 ```
-then go to your favourite web browser and type in the searchbar 
+
+3. Go to your favourite web browser and type this in the searchbar. 
 
 `http://0.0.0.0:8000/`
 
@@ -315,9 +315,86 @@ I find it particularly useful to create additional files in here to address the 
 See architechture below. Make sure to add this to your path when calling them in your md file. 
 
 ```
+course-starter-python
+├── .gitignore          # Files you change on your local that you do not want to track changes for or commit to the repo. 
+├── .prettierrc         # Adds consistency to coding style. 
+├── LICENSE             # Terms able to use this platform 
+├── README.md           # Documentation and Description 
+├── docker-compose.yml  # This and the dockerfile and needed to create a container used to install Gatsby and node10 
+├── dockerfile          # See above 
+├── gatsby-browser.js    
+├── gatsby-config.js    
+├── gatsby-node.js      
+├── main.js
+├── meta.json           # Add neccasary customization such as descriptions bio and branch needed to make binder from 
+├── package-lock.json
+├── package.json
+├── theme.sass          # Can be customizable to change fonts style and size and website colours and font 
+├── binder   
+    └── requirements.txt     # A file containing all the packages needed for the coding exercises
+├── chapter             # n = the number of modules/chapters you want. 
+    ├── module0.md
+    ├── module1.md
+    ├── ...
+    └── moduleN.md
+├── data                # Store exercise datafiles here 
+    └── exercise-data.csv
+├── exercises           # This file will contain all the coding exercise scripts. 
+    ├── exercise_01.py
+    ├── solution_01.py
+    ├── test_01.py
+    ├── function.py
+    └── price_linearanalysis3.png
+├── slides              # This is where the slide decks live
+    ├── module0_00.md
+    ├── ...
+    └── moduleN_nn.md
+├── src                 # Don't want to go to much into this 
+    ├── markdown.js
+    ├── context.js
+    ├── components              
+        ├── button.js
+        ├── choice.js
+        ├── code.js
+        ├── exercise.js
+        ├── hint.js
+        ├── juniper.js
+        ├── layout.js
+        ├── link.js
+        ├── seo.js
+        ├── slides.js
+        └── typography.js
+    ├── pages              
+        └── index.js
+    ├── styles               
+        ├── button.module.sass
+        ├── choice.module.sass
+        ├── code.module.sass
+        ├── exercise.module.sass
+        ├── hint.module.sass
+        ├── index.module.sass
+        ├── index.sass
+        ├── layout.module.sass
+        ├── link.module.sass
+        ├── reveal.css
+        ├── slides.module.sass
+        └── typography.module.sass
+    └── templates              
+        └── chapter.js
+└── static               # This is where most of your media will live, be it for slides, or anything else. 
+    ├── icon.png
+    ├── icon_check.svg
+    ├── icon_slides.svg
+    ├── logo.svg
+    ├── profile.jpg
+    └── social.jpg
 
 
 ```
+
+
+
+
 
 To address the standard Course and bio images Ines has added a discriptive table in her course [`README.md`](https://github.com/UBC-MDS/course-starter-python#static-assets)
 
