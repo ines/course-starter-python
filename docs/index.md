@@ -10,10 +10,9 @@ Ines Montani has created this framework using Gatsby and Reveal.js in the front-
 This project is under active development and there are possibilities of changes. If you would like to contribute or point out corrections, please create a new issue addressing your concern, suggestions or contribution. 
 [![](https://user-images.githubusercontent.com/13643239/56341448-68fe9380-61b5-11e9-816f-5c71ae71b94f.png)](https://course-starter-python.netlify.com)
 
-🔆This symbol will be used in this guide for helpful tips/recomendations and suggestions when building your course. 
-🛑
-⚠️ Testing emoji 
-🚨 
+🔆Hot Tips: This symbol will be used in this guide for helpful tips/recomendations and suggestions when building your course.    
+⚠️ Warning: This symbol will give you preventative tips to avoid debugging or issues that I definitely ran into.   
+
 
 ## What To Expect 
 
@@ -131,7 +130,7 @@ This should a single command to complete this and will install Gatsby globally o
 ```
 npm install -g gatsby-cli
 ```
-***NOTE: you will not need to update your dependencies here.***
+***⚠️ Warning: Do not update your dependencies here.***
 
 ### Clone or Install the Repository
 
@@ -151,7 +150,7 @@ Next, we must  install all relevant dependencies by running the following:
 npm install 
 ```
 
-***NOTE: you will be prompted to `run "npm audit fix" to fix them`.  
+***⚠️ Warning: You will be prompted to `run "npm audit fix" to fix them`.  
 I do not recommend doing this as it will burn your site down.***  
 
 The output below will still build your course: 
@@ -475,7 +474,7 @@ You'll also notice we are calling a source file to display our slides. These sli
 
 [Ines explaines](https://github.com/ines/course-starter-python#slides) how your slide mardown document should be structured. 
 
-***WARNING: Be wary of trailing spaces 😵😱!! Although ```---``` may appear to be the same as ```--- ``` they are not and any information placed after the latter will break your slides.***
+***⚠️ Warning: Be wary of trailing spaces 😵😱!! Although ```---``` may appear to be the same as ```--- ``` they are not and any information placed after the latter will break your slides.***
 
 #### Enbedding Video and Audio
 
@@ -504,7 +503,7 @@ _`audio-file-name.mp3` should be living in the `static` folder._
 
 ### Multiple choice questions:
 
-In a similar style to slide you will have code that looks like the following 
+In a similar style to slides you will have code for questions that looks like the following:
 
 ```
 <exercise id="10" title="Fit or Predict">
@@ -514,13 +513,13 @@ Insert questions here.
 <choice>
 <opt text="Solution 1" correct="true">
 
-Great job! Training on training data must be done before predicting on new data. 
+Great job! 
 
 </opt>
 
 <opt text="Solution 2" >
                                   
-How can the model predict without education first? 
+Try again! This is incorrect. 
 
 </opt>
 </choice>
@@ -528,12 +527,57 @@ How can the model predict without education first?
 ```
 - Your question text will live in the `<exercise>`.   
 - You can then specify the solution options that correspond to this question using `<choice>`.  
-- Each option will live in `<opt>`. If you want to specify a solution option as correct you can give it an argument `correct="true"` otherwise if it's wrong, no argument is needed.   🔆***You may have multiple right answers in a question***
+- Each option will live in `<opt>`. If you want to specify a solution option as correct you can give it an argument `correct="true"` otherwise if it's wrong, no argument is needed.   ***🔆You can have multiple right answers in a question***
 
 
-_Note:  You must have padding (empty lines) above and below your question text as well as your answer feedback text as shown above._ 
+***⚠️ Warning: You must have padding (empty lines) above and below your question text as well as your answer feedback text as shown above._ 
 
-If you wish to specify the correct answers 
+#### 🔆You can have several questions in one exercise container
+
+![](img/multi-q-exercise.png)
+<font size="1" color="grey"> Source: Hayley Boyce @ UBC MDS from https://mcl-dsci-571-intro-machine-learning.netlify.com/module1 </font>
+
+
+The key to having several questions in one exercise container is to give `<choice>` an id. 
+``` 
+exercise id="18" title= "Mutiple questions in one exercise">
+
+Question 1 here. 
+
+<choice id="1">
+<opt text= "Solution 1" >
+ 
+Incorrect. 
+
+</opt>
+
+<opt text="Solution 2" correct="true">
+
+Great! 
+
+</opt>
+
+</choice>
+
+Question 2 here 
+
+<choice id="2">
+<opt text= "Solution 1" >
+ 
+Incorrect. 
+
+</opt>
+
+<opt text="Solution 2" correct="true">
+
+Great! 
+
+</opt>
+
+</choice>
+
+</exercise>
+```
 
 ### Codeblock Exercises:
 
