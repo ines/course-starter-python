@@ -128,7 +128,7 @@ This should a single command to complete this and will install Gatsby globally o
 ```
 npm install -g gatsby-cli
 ```
-***NOTE: you will not need to update your dependencies here. 
+***NOTE: you will not need to update your dependencies here.***
 
 ### Clone or Install the Repository
 
@@ -191,57 +191,67 @@ course-starter-python
 ├── package-lock.json
 ├── package.json
 ├── theme.sass          # Can be customizable to change fonts style and size and website colours and font 
+│   │
 ├── binder   
-    └── requirements.txt     # A file containing all the packages needed for the coding exercises
+|   └── requirements.txt     # A file containing all the packages needed for the coding exercises
+│   │
 ├── chapter             # n = the number of modules/chapters you want. 
-    ├── module0.md
-    ├── module1.md
-    ├── ...
-    └── moduleN.md
+|   ├── module0.md
+|   ├── module1.md
+|   ├── ...
+|   └── moduleN.md
+│   │    
 ├── data                # Store exercise datafiles here 
     └── exercise-data.csv
+│   │
 ├── exercises           # This file will contain all the coding exercise scripts. 
-    ├── exercise_01.py
-    ├── solution_01.py
-    ├── test_01.py
-    ├── function.py
-    └── price_linearanalysis3.png
+|   ├── exercise_01.py
+|   ├── solution_01.py
+|   ├── test_01.py
+|   ├── function.py
+|   └── price_linearanalysis3.png
+│   │
 ├── slides              # This is where the slide decks live
-    ├── module0_00.md
-    ├── ...
-    └── moduleN_nn.md
+|   ├── module0_00.md
+|   ├── ...
+|   └── moduleN_nn.md
+│   │
 ├── src                 # Don't want to go to much into this 
-    ├── markdown.js
-    ├── context.js
-    ├── components              
-        ├── button.js
-        ├── choice.js
-        ├── code.js
-        ├── exercise.js
-        ├── hint.js
-        ├── juniper.js
-        ├── layout.js
-        ├── link.js
-        ├── seo.js
-        ├── slides.js
-        └── typography.js
-    ├── pages              
-        └── index.js
-    ├── styles               
-        ├── button.module.sass
-        ├── choice.module.sass
-        ├── code.module.sass
-        ├── exercise.module.sass
-        ├── hint.module.sass
-        ├── index.module.sass
-        ├── index.sass
-        ├── layout.module.sass
-        ├── link.module.sass
-        ├── reveal.css
-        ├── slides.module.sass
-        └── typography.module.sass
+|   ├── markdown.js
+|   ├── context.js
+|   ├── components              
+|   |   ├── button.js
+|   |   ├── choice.js
+|   |   ├── code.js
+|   |   ├── exercise.js
+|   |   ├── hint.js
+|   |   ├── juniper.js
+|   |   ├── layout.js
+|   |   ├── link.js
+|   |   ├── seo.js
+|   |   ├── slides.js
+|   |   └── typography.js
+|   |   |   
+|   ├── pages              
+|   |   └── index.js
+|   |   |
+|   ├── styles               
+|   |   ├── button.module.sass
+|   |   ├── choice.module.sass
+|   |   ├── code.module.sass
+|   |   ├── exercise.module.sass
+|   |   ├── hint.module.sass
+|   |   ├── index.module.sass
+|   |   ├── index.sass
+|   |   ├── layout.module.sass
+|   |   ├── link.module.sass
+|   |   ├── reveal.css
+|   |   ├── slides.module.sass
+|   |   └── typography.module.sass
+|   |   |
     └── templates              
         └── chapter.js
+|   |   |
 └── static               # This is where most of your media will live, be it for slides, or anything else. 
     ├── icon.png
     ├── icon_check.svg
@@ -453,11 +463,46 @@ To makes your exercise a slide deck exercises you will need to do the write the 
 
 </exercise>
 ``` 
-Notice that wer specify slides using `type="slides` argument in the exercise container
-Ines gives information about [this](https://github.com/ines/course-starter-python#slides) but I thought I would add everything here. 
+Notice that we specify slides using `type="slides` argument in the exercise container.
 
-========= HERE=======
-You'll also notice we are calling a source file to display our slides. These slides are stored in the `slides`
+You'll also notice we are calling a source file to display our slides. These slides are stored in the `slides` folder.
+
+[Ines explaines](https://github.com/ines/course-starter-python#slides) how your slide mardown document should be structured. 
+
+***WARNING: Be wary of trailing spaces 😵😱!! Although `---` may appear to be the same as `--- ` they are not and any information placed after the latter will break your slides.***
+
+#### Enbedding Video and Audio
+
+If you are hopeing to make your course particularly engaging, you may want to add videos or audio files to your slides (or questions even). 
+This can be acheived with the following code:   
+
+**Video:**
+```
+<html>
+<video style="display:block; margin: 0 auto;" width="100%" height="auto" controls >
+  <source src="video-file-name.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video></html>
+```  
+_The video size should now respond to the browser size adjustment. `video-file-name.mp4` should be living in the `static` folder._
+
+
+**Audio:**  
+```
+<html>
+<audio controls >
+  <source src="audio-file-name.mp3" />
+</audio></html>
+``` 
+_`audio-file-name.mp3` should be living in the `static` folder._
+
+### Codeblock Exercises:
+
+
+
+#### `binder/requirements.txt`
+
+### Multiple choice questions:
 
 
 ### `static` folder 
@@ -487,7 +532,4 @@ ex:
         └── video_n.mp4
 ```
 The required images are all specified in Ines' documentation in her [`README.md` here](https://github.com/UBC-MDS/course-starter-python#static-assets).
-
-#### Enbedding Video and Audio in Slides 
-
 
