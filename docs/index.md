@@ -34,7 +34,7 @@ docker-compose up
 ```
 
 3. Go to your favourite web browser and type this in the searchbar:  
-http://0.0.0.0:8000/
+[http://0.0.0.0:8000/](http://0.0.0.0:8000/)
 
 
 ## Setup without Docker 
