@@ -1,10 +1,10 @@
 ---
-title: 'Chapter 2: More stuff'
+title: 'Chapter 3: Trying more things '
 description:
   'This chapter will teach you even more stuff and help you learn some new
   concepts.'
-prev: /chapter1
-next: /chapter3
+prev: /chapter2
+next: null
 type: chapter
-id: 2
+id: 3
 ---
