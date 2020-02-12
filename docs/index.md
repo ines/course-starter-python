@@ -10,6 +10,10 @@ Ines Montani has created this framework using Gatsby and Reveal.js in the front-
 This project is under active development and there are possibilities of changes. If you would like to contribute or point out corrections, please create a new issue addressing your concern, suggestions or contribution. 
 [![](https://user-images.githubusercontent.com/13643239/56341448-68fe9380-61b5-11e9-816f-5c71ae71b94f.png)](https://course-starter-python.netlify.com)
 
+🔆This symbol will be used in this guide for helpful tips/recomendations and suggestions when building your course. 
+🛑
+⚠️ Testing emoji 
+🚨 
 
 ## What To Expect 
 
@@ -410,7 +414,7 @@ These are the files that make up the topics of your course and will be displayed
 
 <br> 
 
-each md file in here will need the specified yaml that Ines explains: 
+each `chapter.md` file will need this yaml specification that Ines explains: 
 
 ```
 ---
@@ -424,11 +428,11 @@ type: chapter # important: this creates a standalone page from the chapter
 ```
 Here are some additional comments: 
 
-1. Make sure each id is unique or you may have some issues with some modules not showing up
-2. Make sure that you take care specifying the correct `prev` and `next` otherwise it could damage the flow of your material. 
-3. you don't need to have your extension of your course labeled as "chapters" if you wish to call each topic here something other than chapter in the url then simply change the file names to `module`, `topic`, `lecture` followed by the number instead. Do not change the folder name and do not change the `type` in the yaml. 
+1. Make sure each `id` is unique or you may have some issues with some modules not showing up.
+2. Take care specifying the correct `prev` and `next` otherwise it could damage the flow of your material. 
+3. You don't need to have your website extension of your course labeled as "chapters" if you wish to have your link extensions named something other than chapter in the url, you can change the file names to `module`, `topic`, `lecture` or anything else followed by the number. Do not change the folder name and do not change the `type` in the yaml. 
 
-Each chapter file with contain the code of what that chapter will look like. Specifically: 
+Each `chapter.md` file will contain the code of what that chapter will look like. Specifically: 
 
 ![](img/chapter_layout.png)
 <font size="1" color="grey">Source: Ines Montani from https://course.spacy.io/chapter1</font>
@@ -437,7 +441,7 @@ Each chapter file with contain the code of what that chapter will look like. Spe
 
 Now that we have a chapter.md file with a completed yaml, lets add the course content. 
 
-Each numbered container dispayed in the chapter image corresponds to an `exercise`. Each exercise needs a unique id and specified with a title. 
+Each numbered container dispayed in the image above corresponds to an `exercise`. Each exercise needs a unique id and specified with a title. 
 
 ```
 <exercise id="1" title="Title of the exercise">
@@ -448,10 +452,9 @@ something here
 ```
 
 These exercises can in the form of different activities as well:  
-]
 1. Slides: Lecture material and content 
-2. Codeblock exercises: An opportunity for students to test their coding skills
-3. Multiple choice questions: : An opportunity for students to test themselves on the material they just learned.
+2. Multiple choice questions: : An opportunity for students to test themselves on the material they just learned.
+3. Codeblock exercises: An opportunity for students to test their coding skills
 
 
 ### Slides 
@@ -472,7 +475,7 @@ You'll also notice we are calling a source file to display our slides. These sli
 
 [Ines explaines](https://github.com/ines/course-starter-python#slides) how your slide mardown document should be structured. 
 
-***WARNING: Be wary of trailing spaces 😵😱!! Although `---` may appear to be the same as `--- ` they are not and any information placed after the latter will break your slides.***
+***WARNING: Be wary of trailing spaces 😵😱!! Although ```---``` may appear to be the same as ```--- ``` they are not and any information placed after the latter will break your slides.***
 
 #### Enbedding Video and Audio
 
@@ -499,13 +502,64 @@ _The video size should now respond to the browser size adjustment. `video-file-n
 ``` 
 _`audio-file-name.mp3` should be living in the `static` folder._
 
+### Multiple choice questions:
+
+In a similar style to slide you will have code that looks like the following 
+
+```
+<exercise id="10" title="Fit or Predict">
+
+Insert questions here. 
+
+<choice>
+<opt text="Solution 1" correct="true">
+
+Great job! Training on training data must be done before predicting on new data. 
+
+</opt>
+
+<opt text="Solution 2" >
+                                  
+How can the model predict without education first? 
+
+</opt>
+</choice>
+</exercise>
+```
+- Your question text will live in the `<exercise>`.   
+- You can then specify the solution options that correspond to this question using `<choice>`.  
+- Each option will live in `<opt>`. If you want to specify a solution option as correct you can give it an argument `correct="true"` otherwise if it's wrong, no argument is needed.   🔆***You may have multiple right answers in a question***
+
+
+_Note:  You must have padding (empty lines) above and below your question text as well as your answer feedback text as shown above._ 
+
+If you wish to specify the correct answers 
+
 ### Codeblock Exercises:
 
+In a fashion similar to slides we are going to reference a source file that corresponds to the coding activity. 
+your code in `chapter.md` will look like this:
+
+```
+<exercise id="13" title="Calculating Gini Impurity">
+
+
+You can type your question instructions here
+
+
+<codeblock id="exercise-file-name">
+
+In this space is where you will write any coding or question hints 
+
+
+</codeblock>
+</exercise>
+```
 
 
 #### `binder/requirements.txt`
 
-### Multiple choice questions:
+
 
 
 ### `static` folder 
