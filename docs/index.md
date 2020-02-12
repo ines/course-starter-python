@@ -474,7 +474,8 @@ You'll also notice we are calling a source file to display our slides. These sli
 
 [Ines explaines](https://github.com/ines/course-starter-python#slides) how your slide mardown document should be structured. 
 
-***⚠️ Warning: Be wary of trailing spaces 😵😱!! Although ```---``` may appear to be the same as ```--- ``` they are not and any information placed after the latter will break your slides.***
+***⚠️ Warning: Be wary of trailing spaces 😵😱!!   
+Although ```---``` may appear to be the same as ```--- ``` they are not and any information placed after the latter will break your slides.***
 
 #### Enbedding Video and Audio
 
@@ -530,13 +531,14 @@ Try again! This is incorrect.
 - Each option will live in `<opt>`. If you want to specify a solution option as correct you can give it an argument `correct="true"` otherwise if it's wrong, no argument is needed.   ***🔆You can have multiple right answers in a question***
 
 
-***⚠️ Warning: You must have padding (empty lines) above and below your question text as well as your answer feedback text as shown above._ 
+***⚠️ Warning: You must have padding (empty lines) above and below your question text as well as your answer feedback text as shown above.*** 
 
 #### 🔆You can have several questions in one exercise container
 
 ![](img/multi-q-exercise.png)
 <font size="1" color="grey"> Source: Hayley Boyce @ UBC MDS from https://mcl-dsci-571-intro-machine-learning.netlify.com/module1 </font>
 
+<br> 
 
 The key to having several questions in one exercise container is to give `<choice>` an id. 
 ``` 
@@ -591,7 +593,7 @@ your code in `chapter.md` will look like this:
 You can type your question instructions here
 
 
-<codeblock id="exercise-file-name">
+<codeblock id="coding-question">
 
 In this space is where you will write any coding or question hints 
 
@@ -599,6 +601,36 @@ In this space is where you will write any coding or question hints
 </codeblock>
 </exercise>
 ```
+
+This is where things can get a bit tricky. Each coding exercise will require 3 files: 
+
+- `exc_coding-question.py` -> The code displayed to the student that they will have to fill in 
+- `solution_coding-question.py` -> the expected coding solution
+- `test_coding-question.py` -> Tests to see if the input done by the student were correct (output when student clicks "submit") 
+
+These are all saved in the `exercises` folder.  
+
+When we want to specify this exercise in the `chapter.md` file in the exercise container, we must only write `id = coding-question`. 
+
+Ines has explain more of this [here](https://github.com/ines/course-starter-python#codeblock) 
+
+***🔆You can also have multiple codeblocks in a single exercise container***
+
+Code is written in the same way that you would run normal python scripts, with importing packages and self made functions that can be stored stored and imported from the exercise folder. 
+
+***🔆When you are calling files ***
+
+#### Let's talk about importing functions!
+
+If you want to import a functions you made the script can be stored in the `exercises` folder. However, since you are running everything from the root of the directory it's crucial you locate yourself into the `exercises` folder. You can do this with the following code. 
+```
+import sys
+sys.path.insert(0, 'exercises/')
+```
+
+you can then import as normal. 
+
+
 
 
 #### `binder/requirements.txt`
