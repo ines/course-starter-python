@@ -33,8 +33,7 @@ and locate yourself to the root of the repo where the `Dockerfile` is located.
 docker-compose up
 ```
 
-3. Go to your favourite web browser and type this in the searchbar. 
-
+3. Go to your favourite web browser and type this in the searchbar:  
 `http://0.0.0.0:8000/`
 
 
