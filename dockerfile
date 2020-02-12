@@ -7,5 +7,6 @@ FROM node:10
 # Add the package.json file and build the node_modules folder
 WORKDIR /app
 COPY ./package*.json ./
-RUN mkdir node_modules && npm install
+RUN mkdir node_modules
 RUN npm install --g gatsby-cli 
+RUN npm install
