@@ -133,7 +133,7 @@ npm install -g gatsby-cli
 
 There are 2 methods in which this step can be done.
 
-a) Simply clone the [starter course repo](https://github.com/ines/course-starter-python)
+a) Simply clone the [starter course repo](https://github.com/ines/course-starter-python)   
 b) [Import](https://github.com/new/import) and install this repo
 
 Make sure that you ***merge all the changes on the other branches to the master one** if you do not create a pull request for `electron` and `feature/deep-links` branches your course will not successfully deploy.*
@@ -147,8 +147,10 @@ Next, we must  install all relevant dependencies by running the following:
 npm install 
 ```
 
-***NOTE: you will be prompted to `run "npm audit fix" to fix them`. I do not recommend doing this as it will burn your site down.***  
-the output below will still build your course: 
+***NOTE: you will be prompted to `run "npm audit fix" to fix them`.  
+I do not recommend doing this as it will burn your site down.***  
+
+The output below will still build your course: 
 ```
 found 572 vulnerabilities (4 low, 4 moderate, 564 high)
 ```
@@ -165,6 +167,8 @@ You can now view course-starter-python in the browser.
 
   http://localhost:8000/
 ```
+**Quicklink:** [http://localhost:8000/](http://localhost:8000/)
+
 This should be the begining of a functioning starter-course! 
 
 
@@ -301,9 +305,9 @@ Here is an example of the code you can add.
             </section>
 ```
 
-Since we are adding new class names will are going to need to edit the document that formats the class name. This can be found in `src/styles/` in the doc `index.module.sass`. 
+Since we are adding new class names will are going to need to edit the document that formats the class name. This can be found in `src/styles/index.module.sass`. 
 
-you will need to paste the new classes as follows below into the document. 
+You will need to paste the new classes as follows below into the document. 
 
 ```
 .subtitle
@@ -328,7 +332,7 @@ If you want to play with the measurements this is a welcomed opportunity to cust
 
 This can be done by doing the following:
 
-- Navigate into the `src/pages/` and open `index.js` 
+- Navigate into the `src/pages/index.js` 
 
 You will be adding a new `<section>` (Html code) under `<Layout isHome>` and inbetween the following two lines shown below : between 
 ```
@@ -349,7 +353,7 @@ Here is an example of the code you can add.
             </section>
 ```
 
-Since we are adding new class names will are going to need to edit the document that formats the class name. This can be found in `src/styles/` in the doc `index.module.sass`. 
+Since we are adding new class names will are going to need to edit the document that formats the class name. This can be found in `src/styles/index.module.sass`. 
 
 you will need to paste the new classes as follows below into the document. 
 
@@ -395,7 +399,7 @@ This is where you can change certain design elements of the course including fon
 
 This is where the meat and potatos of your course is.
 
-Ines Montani [discusses in detail each section](https://github.com/UBC-MDS/course-starter-python#%EF%B8%8F-content), however there are a few little details I want to emphesize on that could help as you create this site. 
+Ines Montani [discusses in detail each section](https://github.com/UBC-MDS/course-starter-python#%EF%B8%8F-content), however there are a few little details I want to emphesize that could help as you create this site. 
 
 ### Chapters 
 
@@ -418,7 +422,7 @@ id: 2 # unique identifier for chapter
 type: chapter # important: this creates a standalone page from the chapter
 ---
 ```
-The only things I want to emphasis is as follows: 
+Here are some additional comments: 
 
 1. Make sure each id is unique or you may have some issues with some modules not showing up
 2. Make sure that you take care specifying the correct `prev` and `next` otherwise it could damage the flow of your material. 
@@ -433,7 +437,7 @@ Each chapter file with contain the code of what that chapter will look like. Spe
 
 Now that we have a chapter.md file with a completed yaml, lets add the course content. 
 
-Each numbered item as dispayed in the chapter corresponds to an `exercise`. Each exercise needs a unique id and specified with a title. 
+Each numbered container dispayed in the chapter image corresponds to an `exercise`. Each exercise needs a unique id and specified with a title. 
 
 ```
 <exercise id="1" title="Title of the exercise">
@@ -443,8 +447,8 @@ something here
 </exercise>
 ```
 
-These exercises can in the form of different activities as well
-
+These exercises can in the form of different activities as well:  
+]
 1. Slides: Lecture material and content 
 2. Codeblock exercises: An opportunity for students to test their coding skills
 3. Multiple choice questions: : An opportunity for students to test themselves on the material they just learned.
