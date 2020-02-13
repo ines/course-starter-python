@@ -34,7 +34,9 @@ and locate yourself to the root of the repo where the `Dockerfile` is located.
 docker-compose up
 ```
 You will know when it is done when you see: 
-```You can now view course-starter-python in the browser.``` 
+```
+You can now view course-starter-python in the browser.
+``` 
 
 3. Go to your favourite web browser and type this in the search bar:  
 [http://0.0.0.0:8000/](http://0.0.0.0:8000/)
