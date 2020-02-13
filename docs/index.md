@@ -1,6 +1,6 @@
 # From Zero to ICSP (Ines Course Starter - Python)
 
-Course Starter python is a starter repo based on the course framework [Ines Montani](https://ines.io/) developed for her [online open-source spaCy course](https://course.spacy.io/). Since creating this framework in April 2019, it has since become a useful tool and platform for Data Scientists and Developers alike to implement their own courses in a manner similar to other popular online Data science educational platforms. 
+Course Starter python is a starter repo based on the course framework [Ines Montani](https://ines.io/) developed for her [online open-source spaCy course](https://course.spacy.io/). Since creating this framework in April 2019, it has since become a useful tool and platform for data scientists and developers alike to implement their courses in a manner similar to other popular online Data science educational platforms. 
 
 This course gives the developer the versatility of a lecture slide-type informational piece followed by multiple-choice questions and coding exercises equipped with verification of the students' submitted answers.
 
@@ -10,8 +10,9 @@ Ines Montani has created this framework using Gatsby and Reveal.js in the front-
 This project is under active development and there are possibilities of changes. If you would like to contribute or point out corrections, please create a new issue addressing your concern, suggestions or contribution. 
 [![](https://user-images.githubusercontent.com/13643239/56341448-68fe9380-61b5-11e9-816f-5c71ae71b94f.png)](https://course-starter-python.netlify.com)
 
-🔆Hot Tips: This symbol will be used in this guide for helpful tips/recomendations and suggestions when building your course.    
-⚠️ Warning: This symbol will give you preventative tips to avoid debugging or issues that I definitely ran into.   
+🔆 **Hot Tips:** This symbol will be used in this guide for helpful tips/recommendations and suggestions when building your course.  
+    
+⚠️ **Warning:** This symbol will give you preventative tips to avoid debugging or issues that I ran into.   
 
 
 ## What To Expect 
@@ -25,18 +26,16 @@ let's get started.
 
 ## Setup using Docker Compose 
 
-Advantages and Disadvantages of not installing `node` and `Gatsby` on your local. Since this platform uses version 10 of `node`, you may find yourself unlinking and relinking updated versions often. In this case it may be in your best interest to use Docker compose. Unfortunate when you are updateing this course if you want to see changes you have made, you will have to push any changes to the repo and then wait to build the container again which as you will experience, quite lengthy. The difference with simply installing node 10 and ghatsby on your local is that as you make changes to your repository files and architecture, it is reflected on your local server instantly without the need to push your changes to the repo. Decide for yourself which one is more beneficial for your needs. 
-
-
 1. Clone this repo [starter course repo](https://github.com/UBC-MDS/course-starter-python)
 and locate yourself to the root of the repo where the `Dockerfile` is located.   
 
-2. Run the following command. It should take 5-7 minutes to run.  
+2. Run the following command. It should take about 1 or 2 to run.  
 ```
 docker-compose up
 ```
+You will know when it is done as it will tell you that you can `You can now view course-starter-python in the browser.` 
 
-3. Go to your favourite web browser and type this in the searchbar:  
+3. Go to your favourite web browser and type this in the search bar:  
 [http://0.0.0.0:8000/](http://0.0.0.0:8000/)
 
 
@@ -136,12 +135,12 @@ npm install -g gatsby-cli
 
 There are 2 methods in which this step can be done.
 
-a) Simply clone the [starter course repo](https://github.com/ines/course-starter-python)   
+a) Simply clone the [starter course repo](https://github.com/ines/course-starter-python) and initialize it as a [github repository](https://help.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line)
 b) [Import](https://github.com/new/import) and install this repo
 
 Make sure that you ***merge all the changes on the other branches to the master one** if you do not create a pull request for `electron` and `feature/deep-links` branches your course will not successfully deploy.*
 
-One you have done this you will need to locate yourself to the root of the repo. 
+Once you have done this you will need to locate yourself to the root of the repo. 
 
 ## Running on local Server 
 
@@ -172,14 +171,16 @@ You can now view course-starter-python in the browser.
 ```
 **Quicklink:** [http://localhost:8000/](http://localhost:8000/)
 
-This should be the begining of a functioning starter-course! 
+This should be the beginning of a functioning starter-course! 
 
 
 Now that you have a website that is deploying on your local server we can now begin the steps to customize it to your own taste. 
 
+
+
 ## Repository Structure 
 
-See architechture below. Make sure to add this to your path when calling them in your md file. Some of these files will be explained in further detail depending on if customization or additions is required. 
+See the architecture below. Make sure to add this to your path when calling them in your `md` file. Some of these files will be explained in further detail depending on if customization or additions is required. 
 
 ```
 course-starter-python
@@ -193,7 +194,7 @@ course-starter-python
 ├── gatsby-config.js    
 ├── gatsby-node.js      
 ├── main.js
-├── meta.json           # Add neccasary customization such as descriptions bio and branch needed to make binder from 
+├── meta.json           # Add necessary customization such as descriptions bio and branch needed to make binder from 
 ├── package-lock.json
 ├── package.json
 ├── theme.sass          # Can be customizable to change fonts style and size and website colours and font 
@@ -273,13 +274,32 @@ course-starter-python
 
 There is a lot of different areas to make your site unique but below we are going to edit the files systematically. 
 
+
+### Course Homepage Information 
+
+Here is where we will be changing all the homepage information including Course Name, "About This Course", "About Me", Website and Source. All of these factors are edited in the `meta.json` file located at the root of the repo. Ines has provided [a detailed discription](https://github.com/ines/course-starter-python#metajson) of what each component is responsible for. I am simply going to add some points that could be considered helpful when navigating in these documents  
+
+| Setting              | Additional Notes: |
+| -------------------- | ----------------- |
+| `courseId`           | Ines does not have this parameter in her spacy course, however, deleting this will not let the course function properly so not having this setting is not an option unless you want to explore what makes her spacy course repo different than her course-starter repo. This `courseId` is reflected once you compile your site and it reads `You can now view "courseId" in the browser.`  |
+| `slogan`             | This will show up once you deploy your site and it will be shown in the image of the link that you send.  |
+|`juniper.repo`        | Make sure you insert your GitHub repository path ex: Github-login/repository-name |
+| `juniper.branch`     | We will address this further when building a binder but note that the branch here specified is called binder. That means that we will need to edit the `requirements.txt` file and push it to the binder branch|
+
+for guidance on the other settings refer to [Ines Montani's Documentation](https://github.com/ines/course-starter-python#metajson)
+
+### `theme.sass`
+
+This is where you can change certain design elements of the course including font size, style and colour, overall theme colour, button colour. 
+
+
 ### Introduction on Homepage
 
 _It's important to attribute Naome Ross and Julia Silge's courses for this section as they are responsible for the code pasted below_ 
 
 Unlike Ines's [Spacy Course](https://course.spacy.io/), you may want an introduction similar to what [Julia Silge](https://supervised-ml-course.netlify.com/) and [Naome Ross](https://noamross.github.io/gams-in-r-course/) did for their courses. 
 
-They introduced their courses with a brief summary
+They introduced their courses with a summary and course description.
 
 | ![alt-text-1](img/julia.png)  | ![alt-text-2](img/naome.png) |
 |:---:|:---:|
@@ -289,7 +309,7 @@ This can be done by doing the following:
 
 - Navigate into the `src/pages/` and open `index.js` 
 
-You will be adding a new `<section>` (Html code) under `<Layout isHome>` and inbetween the following two lines shown below : between 
+You will be adding a new `<section>` (Html code) under `<Layout isHome>` and between the following two lines shown below :  
 ```
 <Layout isHome>
    <Logo className={classes.logo} aria-label={siteMetadata.title} /> # HERE
@@ -337,7 +357,7 @@ This can be done by doing the following:
 
 - Navigate into the `src/pages/index.js` 
 
-You will be adding a new `<section>` (Html code) under `<Layout isHome>` and inbetween the following two lines shown below : between 
+You will be adding a new `<section>` (Html code) under `<Layout isHome>` and between the following two lines shown below:  
 ```
 <Layout isHome>
    <Logo className={classes.logo} aria-label={siteMetadata.title} /> # HERE
@@ -381,28 +401,12 @@ you will need to paste the new classes as follows below into the document.
 
 If you want to play with the measurements this is a welcomed opportunity to customize your course further. 
 
-### Course Homepage Information 
-
-Here is where we will be changing all the homepage information including Course Name, "About This Course", "About Me", Website and Source. All of these factors are edited in the `meta.json` file located at the root of the repo. Ines has provided [a detailed discription](https://github.com/ines/course-starter-python#metajson) of what each component is responsible for. I am simply going to add some points that could be considered helpful when navigating in this documents  
-
-| Setting              | Additional Notes: |
-| -------------------- | ----------------- |
-| `courseId`           | Ines does not have this parameter in her spacy course, however deleting this will not let the course function properly so not having this setting is not an option unless you want to explore what makes her spacy course repo different than her course-starter repo. This `courseId` is reflected once you compile your site and it reads `You can now view "courseId" in the browser.`  |
-| `slogan`             | This will show up once you deploy your site and it will be show in the image of the link that you send.  |
-| `juniper.branch`     | We will address this further when building a binder but note that the branch here specified is called binder. That means that we will need to edit the `requirements.txt` file and push it to the binder branch|
-
-for guidance on the other settings refer to [Ines Montani's Documentation](https://github.com/ines/course-starter-python#metajson)
-
-### `theme.sass`
-
-This is where you can change certain design elements of the course including font size, style and colour, overall theme colour, button colour. 
-
 
 ## Contents
 
-This is where the meat and potatos of your course is.
+This is where the majority of your course lies.
 
-Ines Montani [discusses in detail each section](https://github.com/UBC-MDS/course-starter-python#%EF%B8%8F-content), however there are a few little details I want to emphesize that could help as you create this site. 
+Ines Montani [discusses in detail each section](https://github.com/UBC-MDS/course-starter-python#%EF%B8%8F-content), however, there are a few little details I want to emphasize that could help as you create this site. 
 
 ### Chapters 
 
@@ -413,7 +417,7 @@ These are the files that make up the topics of your course and will be displayed
 
 <br> 
 
-each `chapter.md` file will need this yaml specification that Ines explains: 
+each `chapter.md` file will need this YAML specification that Ines explains: 
 
 ```
 ---
@@ -429,7 +433,7 @@ Here are some additional comments:
 
 1. Make sure each `id` is unique or you may have some issues with some modules not showing up.
 2. Take care specifying the correct `prev` and `next` otherwise it could damage the flow of your material. 
-3. You don't need to have your website extension of your course labeled as "chapters" if you wish to have your link extensions named something other than chapter in the url, you can change the file names to `module`, `topic`, `lecture` or anything else followed by the number. Do not change the folder name and do not change the `type` in the yaml. 
+3. You don't need to have the website extension of your course labeled as "chapters" if you wish to have your link extensions named something other than "chapter" in the URL, you can change the file names to `module`, `topic`, `lecture` or anything else followed by the number. Do not change the folder name and do not change the `type` in the YAML. 
 
 Each `chapter.md` file will contain the code of what that chapter will look like. Specifically: 
 
@@ -438,9 +442,9 @@ Each `chapter.md` file will contain the code of what that chapter will look like
    
 <br>
 
-Now that we have a chapter.md file with a completed yaml, lets add the course content. 
+Now that we have a chapter.md file with a completed YAML, let's add the course content. 
 
-Each numbered container dispayed in the image above corresponds to an `exercise`. Each exercise needs a unique id and specified with a title. 
+Each numbered container displayed in the image above corresponds to an `exercise`. Each exercise needs a unique id and specified with a title. 
 
 ```
 <exercise id="1" title="Title of the exercise">
@@ -452,8 +456,8 @@ something here
 
 These exercises can in the form of different activities as well:  
 1. Slides: Lecture material and content 
-2. Multiple choice questions: : An opportunity for students to test themselves on the material they just learned.
-3. Codeblock exercises: An opportunity for students to test their coding skills
+2. Multiple choice questions: An opportunity for students to test themselves on the material they just learned.
+3. Code block exercises: An opportunity for students to test their coding skills
 
 
 ### Slides 
@@ -472,14 +476,14 @@ Notice that we specify slides using `type="slides` argument in the exercise cont
 
 You'll also notice we are calling a source file to display our slides. These slides are stored in the `slides` folder.
 
-[Ines explaines](https://github.com/ines/course-starter-python#slides) how your slide mardown document should be structured. 
+[Ines explaines](https://github.com/ines/course-starter-python#slides) how your slide markdown document should be structured. 
 
 ***⚠️ Warning: Be wary of trailing spaces 😵😱!!   
 Although ```---``` may appear to be the same as ```--- ``` they are not and any information placed after the latter will break your slides.***
 
 #### Enbedding Video and Audio
 
-If you are hopeing to make your course particularly engaging, you may want to add videos or audio files to your slides (or questions even). 
+If you are hoping to make your course particularly engaging, you may want to add videos or audio files to your slides (or questions even). 
 This can be acheived with the following code:   
 
 **Video:**
@@ -542,7 +546,7 @@ Try again! This is incorrect.
 
 The key to having several questions in one exercise container is to give `<choice>` an id. 
 ``` 
-exercise id="18" title= "Mutiple questions in one exercise">
+exercise id="18" title= "Multiple questions in one exercise">
 
 Question 1 here. 
 
@@ -606,44 +610,44 @@ This is where things can get a bit tricky. Each coding exercise will require 3 f
 
 - `exc_coding-question.py` -> The code displayed to the student that they will have to fill in 
 - `solution_coding-question.py` -> the expected coding solution
-- `test_coding-question.py` -> Tests to see if the input done by the student were correct (output when student clicks "submit") 
+- `test_coding-question.py` -> Tests to see if the input done by the student were correct (output when the student clicks "submit") 
 
 These are all saved in the `exercises` folder.  
 
 When we want to specify this exercise in the `chapter.md` file in the exercise container, we must only write `id = coding-question`. 
 
-Ines has explain more of this [here](https://github.com/ines/course-starter-python#codeblock) 
+Ines has explained more of this [here](https://github.com/ines/course-starter-python#codeblock) 
 
-***🔆You can also have multiple codeblocks in a single exercise container***
+***🔆You can also have multiple code blocks in a single exercise container***
 
-Code is written in the same way that you would run normal python scripts, with importing packages and self made functions that can be stored stored and imported from the exercise folder. 
+Python code is written in regular scripts while importing packages per usual. 
 
-***🔆When you are calling files ***
+***🔆Remember that you are located at the root of the repo and you will have to reflect that in the path to the file. Eg. data from the data folder ***
 
 #### Let's talk about importing functions!
 
-If you want to import a functions you made the script can be stored in the `exercises` folder. However, since you are running everything from the root of the directory it's crucial you locate yourself into the `exercises` folder. You can do this with the following code. 
+If you want to import a function you made, the script can be stored in the `exercises` folder. However, since you are running everything from the root of the directory you must locate yourself into the `exercises` folder. You can do this with the following code. 
 ```
 import sys
 sys.path.insert(0, 'exercises/')
 ```
-
 you can then import as normal. 
-
-
-
 
 #### `binder/requirements.txt`
 
+Remember back in `meta.json` we discussed the argument `juniper.branch` briefly? Code block exercises are where this comes to play. 
 
+Any imported packages need to be added to `binder/requirements.txt` and since we specified in juniper `"branch": "binder"` this is the branch where we will need to push changes to this document.
+- add your packages and if need be the versions to the `requirements.txt`
+- build your [binder](https://mybinder.org/) and refer to [Ines's explanation](https://github.com/ines/spacy-course#setting-up-binder) for more. 
+    - ⚠️ When you build your binder make sure you specify `Git branch, tag, or commit` as `binder` since that is the branch where you will be adjusting the `requirements.txt`
 
 
 ### `static` folder 
-If you have been following along here while you construct your course you may notice at this point that you have yet to change any graphics. 
 
-The `static` file is where any additional images, videos and audio files are store that you will need for the questions or slides part of your course. 
+The `static` file is where any additional images, videos and audio files need for the questions or slides part of your course are stored. 
 
-I find it particularly useful to create additional files in here to address the different chapters you will be making for added clarity and organization. aka I add a folder for each chapter/module and save the media files in it's corresponding folder. 
+I find it particularly useful to create additional files in here to address the different chapters you will be making for added clarity and organization. aka I add a folder for each chapter/module and save the media files in its corresponding folder. 
 ex: 
 ```
 ...
