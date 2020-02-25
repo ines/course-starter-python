@@ -284,7 +284,7 @@ Here is where we will be changing all the homepage information including Course 
 
 | Setting              | Additional Notes: |
 | -------------------- | ----------------- |
-| `courseId`           | Ines does not have this parameter in her spacy course, however, deleting this will not let the course function properly so not having this setting is not an option unless you want to explore what makes her spacy course repo different than her course-starter repo. This `courseId` is reflected once you compile your site and it reads `You can now view "courseId" in the browser.`  |
+| `courseId`           | Ines does not have this parameter in her spacy course, however, deleting this will not let the course function properly so not having this setting is not an option unless you want to explore what makes her spacy course repo different than her course-starter repo.|
 | `slogan`             | This will show up once you deploy your site and it will be shown in the image of the link that you send.  |
 |`juniper.repo`        | Make sure you insert your GitHub repository path ex: Github-login/repository-name |
 | `juniper.branch`     | We will address this further when building a binder but note that the branch here specified is called binder. That means that we will need to edit the `requirements.txt` file and push it to the binder branch|
