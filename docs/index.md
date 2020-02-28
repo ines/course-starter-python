@@ -1,5 +1,31 @@
 # From Zero to ICSP (Ines Course Starter - Python)
 
+Table of Contents
+=================
+
+   * [From Zero to ICSP (Ines Course Starter - Python)](#from-zero-to-icsp-ines-course-starter---python)
+      * [What to Expect](#what-to-expect)
+      * [Creating Your Website Without Installing Dependencies (Using Docker Compose)](#creating-your-website-without-installing-dependencies-using-docker-compose)
+      * [Creating your website by Installing Dependencies](#creating-your-website-by-installing-dependencies)
+         * [Install Node](#install-node)
+         * [Install Gatsby](#install-gatsby)
+         * [Clone or Install the Repository](#clone-or-install-the-repository)
+         * [Running on local Server](#running-on-local-server)
+      * [Repository Structure](#repository-structure)
+      * [Customization](#customization)
+         * [Course Homepage Information](#course-homepage-information)
+         * [theme.sass](#themesass)
+         * [Introduction on Homepage](#introduction-on-homepage)
+      * [Contents](#contents)
+         * [Chapters](#chapters)
+         * [Slides](#slides)
+            * [Embedding Video and Audio](#embedding-video-and-audio)
+         * [Multiple choice questions:](#multiple-choice-questions)
+            * [<g-emoji class="g-emoji" alias="high_brightness" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f506.png">🔆</g-emoji>You can have several questions in one exercise container](#you-can-have-several-questions-in-one-exercise-container)
+         * [Codeblock Exercises:](#codeblock-exercises)
+            * [Let's talk about importing functions!](#lets-talk-about-importing-functions)
+            * [binder/requirements.txt](#binderrequirementstxt)
+         * [static folder](#static-folder)
 
 
 Course Starter python is a starter repo based on the course framework [Ines Montani](https://ines.io/) developed for her [online open-source spaCy course](https://course.spacy.io/). Since creating this framework in April 2019, it has since become a useful tool and platform for data scientists and developers alike to implement their courses in a manner similar to other popular online Data science educational platforms. 
@@ -26,7 +52,7 @@ You may need to know _some_ Html for additional customization, however by no mea
 
 This tutorial will describe the steps to create a complete initial "Starter Course" with zero customization. From here we will then change, edit and add files to complete your desired unique course. 
 
-You can choose either to create your website by [installing the dependencies (Node and Gatsby)](#creating-your-website-by-installing-dependencies) or we have conveniently made a docker compose file available to avoid that. If you don't want to install the dependencies follow the steps [here](creating-your-website-without-installing-dependencies-using-docker-compose)
+You can choose either to create your website by [installing the dependencies (Node and Gatsby)](#creating-your-website-by-installing-dependencies) or we have conveniently made a docker compose file available to avoid that. If you don't want to install the dependencies follow the steps [here](#creating-your-website-without-installing-dependencies-using-docker-compose)
 
 ## Creating Your Website Without Installing Dependencies (Using Docker Compose) 
 
@@ -153,7 +179,7 @@ Make sure that you ***merge all the changes on the other branches to the master 
 
 Once you have done this you will need to locate yourself to the root of the repo. 
 
-## Running on local Server 
+### Running on local Server 
 
 Next, we must  install all relevant dependencies by running the following: 
 ```
