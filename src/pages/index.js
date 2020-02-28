@@ -22,7 +22,7 @@ export default ({ data }) => {
                 <h1 className={classes.subtitle}> INSERT CATCHY TAG LINE HERE </h1>
                 <div className={classes.introduction}>
                 <p>
-                    FILLER WORDS HERE. WHAT IS YOUR COURSE ABOUT? DINOSAURS? NEURAL NETS? HOW TO SURVIVE EVENTS WITH THE INLAWS? WRITE IT HERE! 
+                    This is a good place to write what your course is about!  Dinosaurs? Neural Networks? LSTM? How to do taxes and not get bored? Write it here!   
                 </p>
                 </div>
             </section>
