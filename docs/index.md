@@ -1,5 +1,7 @@
 # From Zero to ICSP (Ines Course Starter - Python)
 
+
+
 Course Starter python is a starter repo based on the course framework [Ines Montani](https://ines.io/) developed for her [online open-source spaCy course](https://course.spacy.io/). Since creating this framework in April 2019, it has since become a useful tool and platform for data scientists and developers alike to implement their courses in a manner similar to other popular online Data science educational platforms. 
 
 This course gives the developer the versatility of a lecture slide-type informational piece followed by multiple-choice questions and coding exercises equipped with verification of the students' submitted answers.
@@ -15,16 +17,18 @@ This project is under active development and there are possibilities of changes.
 ⚠️ **Warning:** This symbol will give you preventative tips to avoid debugging or issues that I ran into.   
 
 
-## What To Expect 
+## What to Expect 
 
 I hope that this thorough documentation will help you deploy, customize and troubleshoot your starter course. Ines provides some wonderful instructions in her `README.md` file, but I noticed there were a few notes I wanted to add to it for my colleagues and others attempting to make their course so that they can save time on troubleshooting. 
 
 You will be working with different file types including `.md` (and potentially `.rmd`), `.json`, `.py` and `.txt`. 
 You may need to know _some_ Html for additional customization, however by no means in-depth. 
 
-let's get started. 
+This tutorial will describe the steps to create a complete initial "Starter Course" with zero customization. From here we will then change, edit and add files to complete your desired unique course. 
 
-## Setup using Docker Compose 
+You can choose either to create your website by [installing the dependencies (Node and Gatsby)](#creating-your-website-by-installing-dependencies) or we have conveniently made a docker compose file available to avoid that. If you don't want to install the dependencies follow the steps [here](creating-your-website-without-installing-dependencies-using-docker-compose)
+
+## Creating Your Website Without Installing Dependencies (Using Docker Compose) 
 
 1. Clone this repo [starter course repo](https://github.com/UBC-MDS/course-starter-python)
 and locate yourself to the root of the repo where the `Dockerfile` is located.   
@@ -42,9 +46,13 @@ You can now view course-starter-python in the browser.
 [http://0.0.0.0:8000/](http://0.0.0.0:8000/)
 
 
-## Setup without Docker 
+This should be the beginning of a functioning starter-course! 
 
-This tutorial will describe the steps to create a complete initial "Starter Course" with zero customization. From here we will then change, edit and add files to complete your desired unique course. 
+
+Now that you have a website that is deploying on your local server, we can now begin the steps to customize it to your own taste. 
+
+
+## Creating your website by Installing Dependencies 
 
 ### Install Node 
 
@@ -68,7 +76,7 @@ brew install node@10
 
 If it's a version other than 10, you will **need** to downgrade/upgrade to version 10 - or Gatsby will not be able to start a development server or build a page. 
 
-To change to version 10 follow the following commands:
+To change to version 10, follow the following commands:
 
 ```
 brew search node
@@ -106,7 +114,7 @@ This will likely need to be forced and thus will require:
 brew link --force --overwrite node@10
 ```
 
-You may also be prompted to specify that you need to have node@10 first in your PATH so so you should run the command below before attempting force linking node@10 (the command above) again:
+You may also be prompted to specify that you need to have node@10 first in your PATH so you should run the command below before attempting force linking node@10 (the command above) again:
 
 ```
  echo 'export PATH="/usr/local/opt/node@10/bin:$PATH"' >> ~/.bash_profile 
@@ -138,7 +146,7 @@ npm install -g gatsby-cli
 
 There are 2 methods in which this step can be done.
 
-a) Simply clone the [starter course repo](https://github.com/ines/course-starter-python) and initialize it as a [github repository](https://help.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line)
+a) Simply clone the [starter course repo](https://github.com/ines/course-starter-python) and initialize it as a [GitHub repository](https://help.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line)
 b) [Import](https://github.com/new/import) and install this repo
 
 Make sure that you ***merge all the changes on the other branches to the master one** if you do not create a pull request for `electron` and `feature/deep-links` branches your course will not successfully deploy.*
@@ -160,7 +168,7 @@ The output below will still build your course:
 found 572 vulnerabilities (4 low, 4 moderate, 564 high)
 ```
 
-and finally to build the site on your local:
+and finally, to build the site on your local:
 
 ```
 npm run dev    
@@ -172,12 +180,12 @@ You can now view course-starter-python in the browser.
 
   http://localhost:8000/
 ```
-**Quicklink:** [http://localhost:8000/](http://localhost:8000/)
+**Quick link:** [http://localhost:8000/](http://localhost:8000/)
 
 This should be the beginning of a functioning starter-course! 
 
 
-Now that you have a website that is deploying on your local server we can now begin the steps to customize it to your own taste. 
+Now that you have a website that is deploying on your local server, we can now begin the steps to customize it to your own taste. 
 
 
 
@@ -226,7 +234,7 @@ course-starter-python
 |   ├── ...
 |   └── moduleN_nn.md
 │   │
-├── src                 # Don't want to go to much into this 
+├── src                 # Don't want to go too much into this 
 |   ├── markdown.js
 |   ├── context.js
 |   ├── components              
@@ -286,7 +294,7 @@ Here is where we will be changing all the homepage information including Course 
 | -------------------- | ----------------- |
 | `courseId`           | Ines does not have this parameter in her spacy course, however, deleting this will not let the course function properly so not having this setting is not an option unless you want to explore what makes her spacy course repo different than her course-starter repo.|
 | `slogan`             | This will show up once you deploy your site and it will be shown in the image of the link that you send.  |
-|`juniper.repo`        | Make sure you insert your GitHub repository path ex: Github-login/repository-name |
+|`juniper.repo`        | Make sure you insert your GitHub repository path ex: GitHub-login/repository-name |
 | `juniper.branch`     | We will address this further when building a binder but note that the branch here specified is called binder. That means that we will need to edit the `requirements.txt` file and push it to the binder branch|
 
 for guidance on the other settings refer to [Ines Montani's Documentation](https://github.com/ines/course-starter-python#metajson)
@@ -298,15 +306,15 @@ This is where you can change certain design elements of the course including fon
 
 ### Introduction on Homepage
 
-_It's important to attribute Naome Ross and Julia Silge's courses for this section as they are responsible for the code pasted below_ 
+_It's important to attribute Noam Ross and Julia Silge's courses for this section as they are responsible for the code pasted below_ 
 
-Unlike Ines's [Spacy Course](https://course.spacy.io/), you may want an introduction similar to what [Julia Silge](https://supervised-ml-course.netlify.com/) and [Naome Ross](https://noamross.github.io/gams-in-r-course/) did for their courses. 
+Unlike Ines's [Spacy Course](https://course.spacy.io/), you may want an introduction similar to what [Julia Silge](https://supervised-ml-course.netlify.com/) and [Noam Ross](https://noamross.github.io/gams-in-r-course/) did for their courses. 
 
 They introduced their courses with a summary and course description.
 
 | ![alt-text-1](img/julia.png)  | ![alt-text-2](img/naome.png) |
 |:---:|:---:|
-| Julia Silge's course front page | Naome Ross's course front page| 
+| Julia Silge's course front page | Noam Ross's course front page| 
 
 This can be done by doing the following:
 
@@ -479,15 +487,15 @@ Notice that we specify slides using `type="slides` argument in the exercise cont
 
 You'll also notice we are calling a source file to display our slides. These slides are stored in the `slides` folder.
 
-[Ines explaines](https://github.com/ines/course-starter-python#slides) how your slide markdown document should be structured. 
+[Ines explains](https://github.com/ines/course-starter-python#slides) how your slide markdown document should be structured. 
 
 ***⚠️ Warning: Be wary of trailing spaces 😵😱!!   
 Although ```---``` may appear to be the same as ```--- ``` they are not and any information placed after the latter will break your slides.***
 
-#### Enbedding Video and Audio
+#### Embedding Video and Audio
 
 If you are hoping to make your course particularly engaging, you may want to add videos or audio files to your slides (or questions even). 
-This can be acheived with the following code:   
+This can be achieved with the following code:   
 
 **Video:**
 ```
@@ -625,7 +633,7 @@ Ines has explained more of this [here](https://github.com/ines/course-starter-py
 
 Python code is written in regular scripts while importing packages per usual. 
 
-***🔆Remember that you are located at the root of the repo and you will have to reflect that in the path to the file. Eg. data from the data folder ***
+***🔆Remember that you are located at the root of the repo and you will have to reflect that in the path to the file. E.g. data from the data folder ***
 
 #### Let's talk about importing functions!
 
