@@ -322,7 +322,7 @@ Here is where we will be changing all the homepage information including Course 
 |`juniper.repo`        | Make sure you insert your GitHub repository path ex: GitHub-login/repository-name |
 | `juniper.branch`     | We will address this further when building a binder but note that the branch here specified is called binder. That means that we will need to edit the `requirements.txt` file and push it to the binder branch|
 
-for guidance on the other settings refer to [Ines Montani's Documentation](https://github.com/ines/course-starter-python#metajson)
+For guidance on the other settings refer to [Ines Montani's Documentation](https://github.com/ines/course-starter-python#metajson).
 
 ### `theme.sass`
 
@@ -331,7 +331,7 @@ This is where you can change certain design elements of the course including fon
 
 ### Introduction on Homepage
 
-_It's important to attribute Noam Ross and Julia Silge's courses for this section as they are responsible for the code pasted below_ 
+_It's important to attribute Noam Ross and Julia Silge's courses for this section as they are responsible for the code pasted below._ 
 
 Unlike Ines's [Spacy Course](https://course.spacy.io/), you may want an introduction similar to what [Julia Silge](https://supervised-ml-course.netlify.com/) and [Noam Ross](https://noamross.github.io/gams-in-r-course/) did for their courses. 
 
@@ -414,7 +414,7 @@ Here is an example of the code you can add.
 
 Since we are adding new class names will are going to need to edit the document that formats the class name. This can be found in `src/styles/index.module.sass`. 
 
-you will need to paste the new classes as follows below into the document. 
+You will need to paste the new classes as follows below into the document. 
 
 ```
 .subtitle
@@ -453,7 +453,7 @@ These are the files that make up the topics of your course and will be displayed
 
 <br> 
 
-each `chapter.md` file will need this YAML specification that Ines explains: 
+Each `chapter.md` file will need this YAML specification that Ines explains: 
 
 ```
 ---
@@ -568,7 +568,7 @@ Try again! This is incorrect.
 ```
 - Your question text will live in the `<exercise>`.   
 - You can then specify the solution options that correspond to this question using `<choice>`.  
-- Each option will live in `<opt>`. If you want to specify a solution option as correct you can give it an argument `correct="true"` otherwise if it's wrong, no argument is needed.   ***🔆You can have multiple right answers in a question***
+- Each option will live in `<opt>`. If you want to specify a solution option as correct you can give it an argument `correct="true"` otherwise if it's wrong, no argument is needed.   ***🔆You can have multiple right answers in a question.***
 
 
 ***⚠️ Warning: You must have padding (empty lines) above and below your question text as well as your answer feedback text as shown above.*** 
@@ -652,13 +652,13 @@ These are all saved in the `exercises` folder.
 
 When we want to specify this exercise in the `chapter.md` file in the exercise container, we must only write `id = coding-question`. 
 
-Ines has explained more of this [here](https://github.com/ines/course-starter-python#codeblock) 
+Ines has explained more of this [here](https://github.com/ines/course-starter-python#codeblock).      
 
-***🔆You can also have multiple code blocks in a single exercise container***
+***🔆You can also have multiple code blocks in a single exercise container.***
 
 Python code is written in regular scripts while importing packages per usual. 
 
-***🔆Remember that you are located at the root of the repo and you will have to reflect that in the path to the file. E.g. data from the data folder ***
+***🔆Remember that you are located at the root of the repo and you will have to reflect that in the path to the file. E.g. data from the data folder.***
 
 #### Let's talk about importing functions!
 
@@ -674,9 +674,9 @@ you can then import as normal.
 Remember back in `meta.json` we discussed the argument `juniper.branch` briefly? Code block exercises are where this comes to play. 
 
 Any imported packages need to be added to `binder/requirements.txt` and since we specified in juniper `"branch": "binder"` this is the branch where we will need to push changes to this document.
-- add your packages and if need be the versions to the `requirements.txt`
-- build your [binder](https://mybinder.org/) and refer to [Ines's explanation](https://github.com/ines/spacy-course#setting-up-binder) for more. 
-    - ⚠️ When you build your binder make sure you specify `Git branch, tag, or commit` as `binder` since that is the branch where you will be adjusting the `requirements.txt`
+- Add your packages and if need be the versions to the `requirements.txt`.
+- Build your [binder](https://mybinder.org/) and refer to [Ines's explanation](https://github.com/ines/spacy-course#setting-up-binder) for more. 
+    - ⚠️ When you build your binder make sure you specify `Git branch, tag, or commit` as `binder` since that is the branch where you will be adjusting the `requirements.txt`.
 
 
 ### `static` folder 
