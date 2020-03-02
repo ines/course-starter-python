@@ -508,7 +508,7 @@ To makes your exercise a slide deck exercises you will need to do the write the 
 
 </exercise>
 ``` 
-Notice that we specify slides using `type="slides` argument in the exercise container.
+Notice that we specify slides using `type="slides"` argument in the exercise container.
 
 You'll also notice we are calling a source file to display our slides. These slides are stored in the `slides` folder.
 
