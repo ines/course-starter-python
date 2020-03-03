@@ -10,6 +10,15 @@ back-end code execution uses [Binder](https://mybinder.org) 💖
 
 [![](https://user-images.githubusercontent.com/13643239/56341448-68fe9380-61b5-11e9-816f-5c71ae71b94f.png)](https://course-starter-python.netlify.com)
 
+## 📖 Documentation
+
+<a href="https://ines.github.io/course-starter-python/docs/"><img width="300" src="https://user-images.githubusercontent.com/13643239/75772717-c3acc980-5d4c-11ea-9a32-1b0cb2bd705f.png" align="right"></a>
+
+Thanks to [@hfboyce](https://github.com/hfboyce) for contributing a super detailed guide on getting started with this course framework, adding exercises, slides and other content, and customizing the design. It also comes with a Dockerfile that takes care of the dependencies for you.
+
+[➡️ **Read the documentation here**](https://ines.github.io/course-starter-python/docs/) 
+
+
 ## ✅ Quickstart
 
 1. [Import](https://github.com/new/import) this repo, install it and make sure
