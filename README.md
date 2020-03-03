@@ -12,11 +12,11 @@ back-end code execution uses [Binder](https://mybinder.org) 💖
 
 ## 📖 Documentation
 
-<a href="https://ines.github.io/course-starter-python/docs/"><img width="300" src="https://user-images.githubusercontent.com/13643239/75772717-c3acc980-5d4c-11ea-9a32-1b0cb2bd705f.png" align="right"></a>
+<a href="https://ines.github.io/course-starter-python/"><img width="300" src="https://user-images.githubusercontent.com/13643239/75773176-ab897a00-5d4d-11ea-8593-1fc018885611.png" align="right"></a>
 
 Thanks to [@hfboyce](https://github.com/hfboyce) for contributing a super detailed guide on getting started with this course framework, adding exercises, slides and other content, and customizing the design. It also comes with a Dockerfile that takes care of the dependencies for you.
 
-[➡️ **Read the documentation here**](https://ines.github.io/course-starter-python/docs/) 
+[➡️ **Read the documentation here**](https://ines.github.io/course-starter-python/) 
 
 
 ## ✅ Quickstart
